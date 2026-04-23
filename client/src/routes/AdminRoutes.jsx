@@ -1,16 +1,28 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import AdminLayout from '../layouts/AdminLayout';
-import Dashboard from '../admin/pages/Dashboard';
-import Login from '../admin/pages/Login';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-// Placeholder components for admin sub-pages
-const AdminPlaceholder = ({ title }) => (
-    <div className="p-4 bg-white rounded shadow">
-        <h2 className="text-xl font-bold mb-2">{title}</h2>
-        <p>This is the management interface for {title.toLowerCase()}.</p>
-    </div>
-);
+// Layout
+import AdminLayout from '../modules/admin/layouts/AdminLayout';
+
+// Admin Pages
+import Login from '../modules/account/pages/Login';
+import Dashboard from '../modules/admin/pages/Dashboard';
+import ManageBlogs from '../modules/admin/pages/ManageBlogs';
+import ManageCareers from '../modules/admin/pages/ManageCareers';
+import ManageEnquiries from '../modules/admin/pages/ManageEnquiries';
+import ManageSectors from '../modules/admin/pages/ManageSectors';
+
+// Protected Route Component
+const ProtectedAdminRoute = ({ children }) => {
+    const { isAuthenticated } = useSelector((state) => state.auth);
+
+    if (!isAuthenticated) {
+        return <Navigate to="/admin/login" replace />;
+    }
+
+    return children;
+};
 
 const AdminRoutes = () => {
     return (
@@ -18,26 +30,27 @@ const AdminRoutes = () => {
             {/* Public Admin Routes */}
             <Route path="login" element={<Login />} />
 
-            {/* Protected Admin Routes */}
-            <Route path="/" element={<AdminLayout />}>
-                <Route index element={<Dashboard />} />
-                
-                {/* Blog Management */}
-                <Route path="blogs" element={<AdminPlaceholder title="Blog Management" />} />
-                <Route path="blogs/create" element={<AdminPlaceholder title="Create Blog" />} />
-                
-                {/* Sector Management */}
-                <Route path="sectors" element={<AdminPlaceholder title="Sector Management" />} />
-                
-                {/* Job Management */}
-                <Route path="jobs" element={<AdminPlaceholder title="Job Management" />} />
-                
-                {/* Governance Management */}
-                <Route path="governance" element={<AdminPlaceholder title="Governance Management" />} />
-                
-                {/* Media Management */}
-                <Route path="media" element={<AdminPlaceholder title="Media Library" />} />
+            {/* Protected Admin Routes managed under AdminLayout */}
+            <Route
+                path="/"
+                element={
+                    <ProtectedAdminRoute>
+                        <AdminLayout />
+                    </ProtectedAdminRoute>
+                }
+            >
+                {/* Redirect /admin to /admin/dashboard */}
+                <Route index element={<Navigate to="dashboard" replace />} />
+
+                <Route path="dashboard" element={<Dashboard />} />
+                <Route path="blogs" element={<ManageBlogs />} />
+                <Route path="sectors" element={<ManageSectors />} />
+                <Route path="jobs" element={<ManageCareers />} />
+                <Route path="enquiries" element={<ManageEnquiries />} />
             </Route>
+
+            {/* Fallback to login for any unknown admin sub-routes */}
+            <Route path="*" element={<Navigate to="/admin/login" replace />} />
         </Routes>
     );
 };

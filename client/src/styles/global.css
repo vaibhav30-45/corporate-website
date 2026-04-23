@@ -4,13 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbar utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Global body styles */
 body {
   @apply text-corporate-navy font-sans antialiased;
   background-color: #fcfcfc;
 }
 
+/* Corporate gradient */
 .company-gradient {
-  background: linear-gradient(135deg, var(--corporate-navy) 0%, #1e293b 100%);
+  background: linear-gradient(
+    135deg,
+    var(--corporate-navy) 0%,
+    #1e293b 100%
+  );
 }
 
 /* Custom Scrollbar */
@@ -29,4 +45,21 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--corporate-blue);
+}
+
+/* Infinite horizontal scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
 }
