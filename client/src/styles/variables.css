@@ -1,0 +1,9 @@
+:root {
+  --corporate-navy: #0F172A;
+  --corporate-blue: #334155;
+  --corporate-orange: #FF7A00;
+  --corporate-slate: #64748B;
+  --corporate-white: #FFFFFF;
+  
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
