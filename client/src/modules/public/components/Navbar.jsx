@@ -81,7 +81,7 @@ const Navbar = () => {
             name: 'Careers',
             path: '/careers',
             dropdown: [
-                { name: 'Job Listings', path: '/careers/listings' },
+                // { name: 'Job Listings', path: '/careers/listings' },
                 { name: 'Life at Company', path: '/careers/life' },
             ]
         },

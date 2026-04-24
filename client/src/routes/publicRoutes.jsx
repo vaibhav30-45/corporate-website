@@ -6,8 +6,10 @@ import PublicLayout from '../modules/public/layouts/PublicLayout';
 import Home from '../modules/public/pages/home/pages/Home';
 import Blogs from '../modules/public/pages/news-media/Blogs';
 import BlogDetail from '../modules/public/pages/news-media/BlogDetail';
-import JobListings from '../modules/public/pages/careers/JobListings';
-import JobDetail from '../modules/public/pages/careers/JobDetail';
+
+import CareersHome from '../modules/public/pages/careers/pages/CareersHome';
+import JobDetail from '../modules/public/pages/careers/pages/JobDetail';
+import LifeAtCompany from '../modules/public/pages/careers/pages/LifeAtCompany';
 
 import ContactInfo from '../modules/public/pages/contact/ContactInfo';
 import PressReleases from '../modules/public/pages/news-media/PressReleases';
@@ -54,10 +56,9 @@ const PublicRoutes = () => {
                 <Route path="news/press-releases" element={<PressReleases />} />
 
                 {/* Career Routes */}
-                <Route path="careers" element={<JobListings />} />
-                <Route path="careers/listings" element={<JobListings />} />
-                <Route path="careers/life" element={<div className="pt-24 text-center">Life at Company</div>} />
-                <Route path="careers/:id" element={<JobDetail />} />
+                <Route path="careers" element={<CareersHome />} />
+                <Route path="careers/life" element={<LifeAtCompany />} />
+                <Route path="careers/:slug" element={<JobDetail />} />
 
                 {/* Contact Route */}
                 <Route path="contact" element={<ContactInfo />} />
