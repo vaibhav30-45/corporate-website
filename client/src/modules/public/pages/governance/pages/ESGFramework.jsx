@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import HeroSection from "../components/HeroSection";
+import HeroSection from "../../../components/HeroSection";
 import governanceImg from "../../../../../assets/governance image.png";
 
 const ESGFramework = () => {

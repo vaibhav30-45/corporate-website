@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import HeroSection from "../components/HeroSection";
+import HeroSection from "../../../components/HeroSection";
 import governanceImg from "../../../../../assets/governance image.png";
 import {
   ShieldCheck,

@@ -29,6 +29,8 @@ const enquirySlice = createSlice({
     builder
       .addCase(submitEnquiry.pending, (state) => {
         state.loading = true;
+        state.success = false;   // ✅ fix
+        state.error = null;      // ✅ fix
       })
       .addCase(submitEnquiry.fulfilled, (state) => {
         state.loading = false;
@@ -43,3 +45,4 @@ const enquirySlice = createSlice({
 
 export const { resetState } = enquirySlice.actions;
 export default enquirySlice.reducer;
+

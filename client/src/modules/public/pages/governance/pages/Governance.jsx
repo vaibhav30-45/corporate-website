@@ -175,7 +175,7 @@ import BoardCard from "../components/BoardCard";
 import ESGCard from "../components/ESGCard";
 import PolicyItem from "../components/PolicyItem";
 import ComplianceCard from "../components/ComplianceCard";
-import HeroSection from "../components/HeroSection";
+import HeroSection from "../../../components/HeroSection";
 import governanceImg from "../../../../../assets/governance image.png";
 
 const Governance = () => {
