@@ -53,7 +53,7 @@ const Hero = () => {
 
             <Link to="/sectors">
               <button className="border border-white/40 px-6 py-3 rounded-md font-semibold hover:bg-orange-500 hover:border-orange-500 hover:scale-105 active:scale-95 transition">
-                Our Services
+                Our Sectors
               </button>
             </Link>
           </motion.div>

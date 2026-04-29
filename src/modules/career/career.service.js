@@ -35,6 +35,35 @@ const getApplications = async () => {
   return await Application.find().populate("jobId").sort({ createdAt: -1 });
 };
 
+const getApplicationsCountByJob = async () => {
+  return await Application.aggregate([
+    {
+      $group: {
+        _id: "$jobId",
+        count: { $sum: 1 }
+      }
+    },
+    {
+      $lookup: {
+        from: "jobs",
+        localField: "_id",
+        foreignField: "_id",
+        as: "job"
+      }
+    },
+    {
+      $unwind: "$job"
+    },
+    {
+      $project: {
+        jobId: "$_id",
+        count: 1,
+        jobTitle: "$job.title"
+      }
+    }
+  ]);
+};
+
 module.exports = {
   createJob,
   getAllJobs,
@@ -43,5 +72,6 @@ module.exports = {
   updateJob,
   deleteJob,
   applyJob,
-  getApplications
+  getApplications,
+  getApplicationsCountByJob
 };

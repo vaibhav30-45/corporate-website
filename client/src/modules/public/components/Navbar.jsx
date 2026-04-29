@@ -137,7 +137,7 @@ const Navbar = () => {
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-white py-4'}`}>
             
-            <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
+            <div className="w-full max-w-7xl mx-auto pl-8 pr-4 sm:pl-12 sm:pr-8 lg:pl-20 lg:pr-12 flex items-center justify-between">
 
                 <Link to="/" className="flex items-center">
                     <img src={logo} alt="NIF Logo" className="h-8 md:h-12 w-auto object-contain transition-transform duration-300 hover:scale-105" />

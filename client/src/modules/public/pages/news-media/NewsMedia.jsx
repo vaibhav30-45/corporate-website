@@ -3,8 +3,8 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import NewsCard from './components/NewsCard';
 import { getCombinedNewsMedia } from './data/dummyData';
-// import { getBlogs } from '../../../services/blogService';
-// import { getAllNews } from '../../../services/newsService';
+import { getBlogs } from '../../../../services/blogService';
+import { getAllNews } from '../../../../services/newsService';
 
 const NewsMedia = () => {
   const location = useLocation();
@@ -14,19 +14,55 @@ const NewsMedia = () => {
   const [newsList, setNewsList] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Initialize data - for now using dummy but structured for real API
+  // Initialize data from API
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        // In real integration: 
-        // const [blogs, news] = await Promise.all([getBlogs(), getAllNews()]);
-        // Process and setNewsList
+        const [blogs, news] = await Promise.all([getBlogs(), getAllNews()]);
         
-        const combined = getCombinedNewsMedia();
+        // Normalize blogs
+        const normalizedBlogs = (Array.isArray(blogs) ? blogs : []).map(blog => ({
+          ...blog,
+          type: 'blog',
+          displayId: blog.slug,
+          displayImage: blog.bannerImage || blog.image,
+          displayDate: new Date(blog.date || blog.createdAt).toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric'
+          }),
+          displayExcerpt: blog.summary || (blog.content ? blog.content.replace(/<[^>]*>/g, '').substring(0, 150) + '...' : ''),
+          displayCategory: blog.category,
+          displayType: 'blog'
+        }));
+
+        // Normalize news
+        const normalizedNews = (Array.isArray(news) ? news : []).map(newsItem => ({
+          ...newsItem,
+          type: newsItem.type || 'press-release',
+          displayId: newsItem.slug,
+          displayImage: newsItem.image,
+          displayDate: new Date(newsItem.publishedAt || newsItem.createdAt).toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric'
+          }),
+          displayExcerpt: newsItem.summary || (newsItem.content ? newsItem.content.replace(/<[^>]*>/g, '').substring(0, 150) + '...' : ''),
+          displayCategory: newsItem.category,
+          displayType: newsItem.type || 'press-release'
+        }));
+
+        // Combine and sort
+        const combined = [...normalizedBlogs, ...normalizedNews]
+          .sort((a, b) => new Date(b.date || b.publishedAt || b.createdAt) - new Date(a.date || a.publishedAt || a.createdAt));
+        
         setNewsList(combined);
       } catch (error) {
         console.error("Error fetching news/media:", error);
+        // Fallback to dummy data if API fails
+        const combined = getCombinedNewsMedia();
+        setNewsList(combined);
       } finally {
         setLoading(false);
       }

@@ -10,3 +10,7 @@ const ProtectedRoute = ({ children, isAuthenticated, redirectPath = '/admin/logi
 };
 
 export default ProtectedRoute;
+
+
+
+

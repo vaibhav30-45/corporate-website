@@ -23,13 +23,18 @@ const Login = () => {
             const response = await authService.login(email, password);
 
             // Dispatch success with user data
-            const userData = response.user || {
-                email: response.email,
-                role: response.role,
-            };
+           const userData = {
+  email: email,
+  role: "admin"
+};
+            // ✅ STORE TOKEN (MOST IMPORTANT)
+localStorage.setItem("token", response.token);
 
-            dispatch(loginSuccess(userData));
-            navigate('/admin/dashboard');
+// optional: store user if needed
+localStorage.setItem("user", JSON.stringify(userData));
+
+dispatch(loginSuccess(userData));
+navigate('/admin/dashboard');
         } catch (err) {
             const errorMessage = err.response?.data?.message || 'Invalid email or password';
             dispatch(loginFailure(errorMessage));

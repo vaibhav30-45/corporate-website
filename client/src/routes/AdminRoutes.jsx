@@ -10,9 +10,11 @@ import Login from '../modules/account/pages/Login';
 import Dashboard from '../modules/admin/pages/Dashboard';
 import ManageBlogs from '../modules/admin/pages/ManageBlogs';
 import ManageCareers from '../modules/admin/pages/ManageCareers';
+import JobApplications from '../modules/admin/pages/JobApplications';
 import ManageEnquiries from '../modules/admin/pages/ManageEnquiries';
-import ManageSectors from '../modules/admin/pages/ManageSectors';
-
+import ManageNews from '../modules/admin/pages/ManageNews';
+import AdminProfile from '../modules/admin/pages/AdminProfile';
+    
 // Protected Route Component
 const ProtectedAdminRoute = ({ children }) => {
     const { isAuthenticated } = useSelector((state) => state.auth);
@@ -44,15 +46,20 @@ const AdminRoutes = () => {
 
                 <Route path="dashboard" element={<Dashboard />} />
                 <Route path="blogs" element={<ManageBlogs />} />
-                <Route path="sectors" element={<ManageSectors />} />
+
                 <Route path="jobs" element={<ManageCareers />} />
+                <Route path="applications" element={<JobApplications />} />
                 <Route path="enquiries" element={<ManageEnquiries />} />
+                <Route path="news" element={<ManageNews />} />
+                <Route path="profile" element={<AdminProfile />} />
             </Route>
 
             {/* Fallback to login for any unknown admin sub-routes */}
-            <Route path="*" element={<Navigate to="/admin/login" replace />} />
+            {/* <Route path="*" element={<Navigate to="/admin/login" replace />} /> */}
         </Routes>
     );
 };
 
 export default AdminRoutes;
+
+

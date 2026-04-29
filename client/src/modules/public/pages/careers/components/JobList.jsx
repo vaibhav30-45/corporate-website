@@ -21,7 +21,7 @@ const JobList = () => {
       {/* JOB CARDS */}
       <div className="mt-6">
         {currentJobs.map((job) => (
-          <JobCard key={job.id} job={job} />
+          <JobCard key={job._id} job={job} />
         ))}
       </div>
 

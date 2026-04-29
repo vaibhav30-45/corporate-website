@@ -1,6 +1,1 @@
 @import './styles/global.css';
-@layer utilities {
-  .clip-path-custom {
-    clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
-  }
-}

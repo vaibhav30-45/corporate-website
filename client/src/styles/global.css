@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.clip-path-custom {
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+}
+
 /* Hide scrollbar utility */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;

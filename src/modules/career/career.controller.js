@@ -61,3 +61,9 @@ exports.getApplications = async (req, res) => {
   const apps = await service.getApplications();
   res.json(apps);
 };
+
+// ADMIN APPLICATIONS COUNT BY JOB
+exports.getApplicationsCountByJob = async (req, res) => {
+  const counts = await service.getApplicationsCountByJob();
+  res.json(counts);
+};

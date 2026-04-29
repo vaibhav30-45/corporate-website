@@ -2,14 +2,15 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { blogData, newsData } from './data/dummyData';
-// import { getBlogBySlug } from '../../../services/blogService';
-// import { getNewsBySlug } from '../../../services/newsService';
+import { getBlogBySlug, getBlogs } from '../../../../services/blogService';
+import { getNewsBySlug, getAllNews } from '../../../../services/newsService';
 
 const NewsDetail = () => {
   const { id: slug } = useParams(); // Using 'id' parameter as slug
   const navigate = useNavigate();
   const location = useLocation();
   const [item, setItem] = useState(null);
+  const [relatedArticles, setRelatedArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const isBlog = location.pathname.includes('/blogs/');
@@ -21,31 +22,33 @@ const NewsDetail = () => {
     const fetchItem = async () => {
       setLoading(true);
       try {
-        // In real integration:
-        // if (isBlog) {
-        //   const data = await getBlogBySlug(slug);
-        //   setItem(data);
-        // } else {
-        //   const data = await getNewsBySlug(slug);
-        //   setItem(data);
-        // }
-
-        // Dummy logic
+        let data;
+        if (isBlog) {
+          data = await getBlogBySlug(slug);
+        } else {
+          data = await getNewsBySlug(slug);
+        }
+        
+        if (data) {
+          setItem(data);
+        } else {
+          navigate('/news');
+        }
+      } catch (error) {
+        console.error("Error fetching detail:", error);
+        // Fallback to dummy data
         let foundItem;
         if (isBlog) {
           foundItem = blogData.find(b => b.slug === slug);
         } else {
           foundItem = newsData.find(n => n.slug === slug);
         }
-
+        
         if (foundItem) {
           setItem(foundItem);
         } else {
           navigate('/news');
         }
-      } catch (error) {
-        console.error("Error fetching detail:", error);
-        navigate('/news');
       } finally {
         setLoading(false);
       }
@@ -53,6 +56,53 @@ const NewsDetail = () => {
 
     fetchItem();
   }, [slug, isBlog, navigate]);
+
+  // Fetch related articles
+  useEffect(() => {
+    if (!item) return;
+
+    const fetchRelated = async () => {
+      try {
+        let allArticles = [];
+        if (isBlog) {
+          const blogs = await getBlogs();
+          allArticles = (Array.isArray(blogs) ? blogs : []).map(blog => ({
+            ...blog,
+            type: 'blog',
+            displayImage: blog.bannerImage || blog.image
+          }));
+        } else {
+          const news = await getAllNews();
+          allArticles = (Array.isArray(news) ? news : []).map(n => ({
+            ...n,
+            type: n.type || 'press-release',
+            displayImage: n.image
+          }));
+        }
+
+        const related = allArticles
+          .filter(i => i.slug !== slug)
+          .slice(0, 3);
+        
+        setRelatedArticles(related);
+      } catch (error) {
+        console.error("Error fetching related articles:", error);
+        // Fallback to dummy data
+        let allArticles = isBlog ? blogData : newsData;
+        const related = allArticles
+          .filter(i => i.slug !== slug)
+          .slice(0, 3)
+          .map(a => ({
+            ...a,
+            type: a.type || (isBlog ? 'blog' : 'press-release'),
+            displayImage: a.bannerImage || a.image
+          }));
+        setRelatedArticles(related);
+      }
+    };
+
+    fetchRelated();
+  }, [item, slug, isBlog]);
 
   if (loading) return (
     <div className="min-h-screen flex items-center justify-center">
@@ -142,38 +192,79 @@ const NewsDetail = () => {
               />
               
               <style dangerouslySetInnerHTML={{ __html: `
-                .rich-content h2, .rich-content h3 { 
+                .rich-content h1, .rich-content h2, .rich-content h3 { 
                   color: #001a3d; 
                   font-weight: 700; 
                   margin-top: 2rem; 
                   margin-bottom: 1rem; 
                 }
+                .rich-content h1 { font-size: 2.25rem; }
                 .rich-content h2 { font-size: 1.875rem; }
                 .rich-content h3 { font-size: 1.5rem; }
                 .rich-content p { 
                   color: #4b5563; 
-                  line-height: 1.75; 
+                  line-height: 1.8; 
                   margin-bottom: 1.5rem; 
+                  font-size: 1.1rem;
                 }
                 .rich-content blockquote {
                   border-left: 4px solid #ff7a00;
-                  background: #f8fafc;
-                  padding: 1.5rem;
+                  background: #fff9f5;
+                  padding: 2rem;
                   font-style: italic;
-                  margin: 2rem 0;
-                  border-radius: 0 0.5rem 0.5rem 0;
+                  margin: 2.5rem 0;
+                  border-radius: 0 1rem 1rem 0;
+                  color: #001a3d;
+                  font-size: 1.25rem;
                 }
-                .rich-content ul {
-                  list-style-type: disc;
+                .rich-content ul, .rich-content ol {
                   margin-left: 1.5rem;
                   margin-bottom: 1.5rem;
                   color: #4b5563;
+                  line-height: 1.8;
                 }
+                .rich-content ul { list-style-type: disc; }
+                .rich-content ol { list-style-type: decimal; }
                 .rich-content li {
-                  margin-bottom: 0.5rem;
+                  margin-bottom: 0.75rem;
+                  padding-left: 0.5rem;
                 }
                 .rich-content strong {
                   color: #001a3d;
+                  font-weight: 700;
+                }
+                .rich-content a {
+                  color: #ff7a00;
+                  text-decoration: underline;
+                  font-weight: 600;
+                }
+                .rich-content img {
+                  border-radius: 1rem;
+                  margin: 2.5rem 0;
+                  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+                  width: 100%;
+                }
+                .rich-content pre {
+                  background: #001a3d;
+                  color: #e2e8f0;
+                  padding: 1.5rem;
+                  border-radius: 1rem;
+                  overflow-x: auto;
+                  margin: 2rem 0;
+                  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+                  font-size: 0.9rem;
+                }
+                .rich-content code {
+                  background: #f1f5f9;
+                  color: #ef4444;
+                  padding: 0.2rem 0.4rem;
+                  border-radius: 0.375rem;
+                  font-family: monospace;
+                }
+                .rich-content pre code {
+                  background: transparent;
+                  color: inherit;
+                  padding: 0;
                 }
               `}} />
               
@@ -213,11 +304,11 @@ const NewsDetail = () => {
                     <span className="absolute -bottom-2 left-0 w-12 h-1 bg-corporate-orange rounded-full"></span>
                   </h4>
                   <div className="space-y-6">
-                    {[...blogData, ...newsData].filter(i => i.slug !== slug).slice(0, 3).map(related => (
+                    {relatedArticles.map(related => (
                       <Link key={related.slug} to={`/news/${related.type}s/${related.slug}`} className="flex gap-4 group">
                         <div className="w-24 h-20 shrink-0 overflow-hidden rounded-lg">
                           <img 
-                            src={related.bannerImage || related.image} 
+                            src={related.displayImage} 
                             alt={related.title} 
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />

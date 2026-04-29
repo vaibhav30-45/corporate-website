@@ -29,22 +29,7 @@ const JobFilter = () => {
         ))}
       </select>
 
-      {/* DEPARTMENT */}
-      <select
-        value={filters.department}
-        onChange={(e) =>
-          dispatch(setFilter({ key: "department", value: e.target.value }))
-        }
-        className="border px-4 py-2 rounded text-gray-600"
-      >
-        <option value="">Department</option>
-        {departments.map((dep, i) => (
-          <option key={i} value={dep}>
-            {dep}
-          </option>
-        ))}
-      </select>
-
+      
       {/* JOB TYPE */}
       <select
         value={filters.type}
