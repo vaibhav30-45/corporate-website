@@ -14,16 +14,16 @@ const CompanyOverview = () => {
           className="text-center mb-12"
         >
           <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-orange-500">
-            Company Overview
+           Platform Development Approach
           </h2>
           <p className="text-gray-500 text-sm  mx-auto">
-            A dynamic ecosystem focused on innovation, sustainability, and global impact across multiple industries.
+           NIOSTGROUP International is being developed as a holding platform that creates and aligns operating businesses within a structured governance framework. <br />  Its first operating platform, NIOSTGROUP Logistics, reflects this approach through a governance-led model focused on certified container leasing, smart logistics assets, and corridor-based execution. 
           </p>
         </motion.div>
 
         {/* 🔥 STAGGER CONTAINER */}
         <motion.div
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -52,7 +52,7 @@ const CompanyOverview = () => {
             />
             <h3 className="font-semibold mb-2">Our Mission</h3>
             <p className="text-sm text-gray-500">
-              Deliver impactful and scalable solutions across industries.
+             To build governance-led, asset-backed platforms that support disciplined growth, operating resilience, and long-term stakeholder value. 
             </p>
           </motion.div>
 
@@ -71,7 +71,7 @@ const CompanyOverview = () => {
             />
             <h3 className="font-semibold mb-2">Our Vision</h3>
             <p className="text-sm text-gray-500">
-              Build a sustainable and technology-driven ecosystem.
+              To become a trusted international holding group known for structured growth, responsible governance, and investment-ready platform development. 
             </p>
           </motion.div>
 
@@ -89,13 +89,23 @@ const CompanyOverview = () => {
               className="mx-auto mb-4"
             />
             <h3 className="font-semibold mb-2">Global Presence</h3>
-            <p className="text-sm text-gray-500">
-              Expanding operations across multiple continents.
-            </p>
+          <div className="flex flex-col gap-3 text-sm text-gray-500 mt-3">
+
+  <span className="flex items-center justify-center gap-2">
+    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+    Australia, Panama
+  </span>
+
+  <span className="flex items-center justify-center gap-2">
+    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
+    Suriname, Guyana
+  </span>
+
+</div>
           </motion.div>
 
           {/* CARD 4 */}
-          <motion.div
+          {/* <motion.div
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0 }
@@ -111,7 +121,7 @@ const CompanyOverview = () => {
             <p className="text-sm text-gray-500">
               Leveraging technology to drive growth and transformation.
             </p>
-          </motion.div>
+          </motion.div> */}
 
         </motion.div>
 

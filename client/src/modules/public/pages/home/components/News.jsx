@@ -291,12 +291,12 @@ const News = () => {
         >
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-orange-500 mb-3">
-              Latest News Insights
+              Insights and Strategic Perspective 
             </h2>
 
             <p className="text-gray-500 text-sm sm:text-base">
-              Stay updated with our latest news, industry insights,
-              and expert perspectives.
+              NIOSTGROUP International shares governance-led perspectives, sector observations, <br /> and strategic commentary relevant to logistics,
+               infrastructure, and cross-border platform development
             </p>
           </div>
 

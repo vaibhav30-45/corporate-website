@@ -10,7 +10,7 @@ const NewsMedia = () => {
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
+ const [selectedCategory, setSelectedCategory] = useState("all");
   const [newsList, setNewsList] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -85,15 +85,29 @@ const NewsMedia = () => {
     { id: 'press-release', label: 'Press Releases' },
 
   ];
+  const categories = [
+  "Industry Insights",
+  "Governance Perspectives",
+  "Market Commentary",
+  "Whitepapers",
+  "Research Notes",
+  "Corridor Analysis",
+];
 
-  const filteredNews = useMemo(() => {
-    return newsList.filter((item) => {
-      const matchesTab = activeTab === 'all' || item.displayType === activeTab;
-      const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                           item.displayExcerpt.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesTab && matchesSearch;
-    });
-  }, [activeTab, searchQuery, newsList]);
+
+
+ const filteredNews = useMemo(() => {
+  return newsList.filter((item) => {
+    const matchesTab =
+      activeTab === "all" || item.displayType === activeTab;
+
+    const matchesCategory =
+      selectedCategory === "all" ||
+      item.displayCategory === selectedCategory;
+
+    return matchesTab && matchesCategory;
+  });
+}, [activeTab, selectedCategory, newsList]);
 
   return (
     <div className="min-h-screen bg-slate-50 mt-20">
@@ -118,57 +132,53 @@ const NewsMedia = () => {
             className=""
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              News & <span className="text-corporate-orange">Media</span>
+              Insights  
             </h1>
             <p className="text-xl text-gray-300 leading-relaxed">
-              Strong governance. Ethical practices. Sustainable growth. We are committed to the highest standards of accountability in everything we do.
+              NIOSTGROUP International shares governance-led perspectives, sector observations,  <br />
+              and strategic commentary relevant to logistics, infrastructure, and cross-border platform development.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Filters & Search */}
-      <section className="py-8 bg-white border-b">
-        <div className="w-full  mx-auto px-8 sm:px-12 lg:px-20">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-            {/* Tabs */}
-            <div className="flex flex-wrap gap-3">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? 'bg-corporate-orange text-white shadow-lg shadow-corporate-orange/20'
-                      : 'bg-white text-gray-600 border border-gray-200 hover:border-corporate-orange hover:text-corporate-orange'
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
+     <section className="py-8 bg-white border-b">
+  <div className="w-full mx-auto px-8 sm:px-12 lg:px-20">
+    <div className="flex flex-wrap items-center gap-3">
 
-            {/* Search */}
-            <div className="relative  w-full">
-              <input
-                type="text"
-                placeholder="Search news..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-corporate-orange/50 transition-all"
-              />
-              <svg
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Tabs */}
+      {tabs.map((tab) => (
+        <button
+          key={tab.id}
+          onClick={() => setActiveTab(tab.id)}
+          className={`px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap ${
+            activeTab === tab.id
+              ? "bg-corporate-orange text-white shadow-lg"
+              : "bg-white text-gray-600 border border-gray-200 hover:border-corporate-orange hover:text-corporate-orange"
+          }`}
+        >
+          {tab.label}
+        </button>
+      ))}
+
+      {/* Categories */}
+      {categories.map((category) => (
+        <button
+          key={category}
+          onClick={() => setSelectedCategory(category)}
+          className={`px-5 py-2.5 rounded-lg text-sm font-medium whitespace-nowrap transition-all duration-300 border ${
+            selectedCategory === category
+              ? "bg-corporate-orange text-white border-corporate-orange"
+              : "bg-white text-gray-600 border-gray-200 hover:bg-corporate-orange hover:text-white hover:border-corporate-orange"
+          }`}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* Grid */}
       <section className="py-16">

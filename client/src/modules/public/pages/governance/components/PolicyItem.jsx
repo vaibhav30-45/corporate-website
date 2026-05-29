@@ -1,13 +1,25 @@
 
 
 import { useNavigate } from "react-router-dom";
-import { Shield, Lock, AlertTriangle, Megaphone } from "lucide-react";
+import {
+  Shield,
+  Lock,
+  FileText,
+  Cookie,
+  Scale,
+  AlertTriangle,
+  Info,
+} from "lucide-react";
+
 
 const icons = [
-  <Shield className="text-orange-500" />,
-  <Lock className="text-orange-500" />,
-  <AlertTriangle className="text-orange-500" />,
-  <Megaphone className="text-orange-500" />,
+      // Policy Links
+  <Lock className="text-orange-500" />,         // Privacy Policy
+  <Scale className="text-orange-500" />,        // Terms & Conditions
+  <Cookie className="text-orange-500" />,       // Cookie Policy
+  <Shield className="text-orange-500" />,       // Code of Conduct
+  <AlertTriangle className="text-orange-500" />, // Anti-Corruption Policy
+  <Info className="text-orange-500" />,         // Disclaimer
 ];
 
 const descriptions = [

@@ -9,24 +9,26 @@ const EnquiryForm = ({ onSuccess }) => {
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.enquiry);
 
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
+ const [form, setForm] = useState({
+  name: "",
+  company: "",
+  email: "",
+  phone: "",
+  subject: "",
+  message: "",
+});
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const validate = () => {
-    if (!form.name) return "Name is required";
-    if (!form.email) return "Email is required";
-    if (!/\S+@\S+\.\S+/.test(form.email)) return "Invalid email";
-    if (!form.message) return "Message is required";
-    return null;
-  };
+ const validate = () => {
+  if (!form.name) return "Name is required";
+  if (!form.email) return "Email is required";
+  if (!/\S+@\S+\.\S+/.test(form.email)) return "Invalid email";
+  if (!form.subject) return "Subject is required";
+  if (!form.message) return "Message is required";
+  return null;
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -85,6 +87,35 @@ const EnquiryForm = ({ onSuccess }) => {
           />
         </div>
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+  {/* COMPANY */}
+  <div>
+    <label className="text-sm font-semibold text-gray-700 mb-1 block">
+      Company
+    </label>
+    <input
+      name="company"
+      value={form.company}
+      onChange={handleChange}
+      placeholder="Enter company name"
+      className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-gray-50/50"
+    />
+  </div>
+
+  {/* SUBJECT */}
+  <div>
+    <label className="text-sm font-semibold text-gray-700 mb-1 block">
+      Subject
+    </label>
+    <input
+      name="subject"
+      value={form.subject}
+      onChange={handleChange}
+      placeholder="Enter subject"
+      className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-gray-50/50"
+    />
+  </div>
+</div>
 
       {/* EMAIL */}
       <div>
