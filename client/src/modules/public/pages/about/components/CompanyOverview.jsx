@@ -19,12 +19,12 @@ const CompanyOverview = () => {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="text-gray-600 leading-relaxed mb-6"
       >
-        NiostGroup Inter-Foundation is a mission-driven initiative focused on
-        building inclusive infrastructure that supports sustainable development.
-        We aim to strengthen access to essential services, enable participation
-        in economic systems, and create long-term value for communities.
+        The group is being built to provide strategic direction, governance oversight, structural
+        coordination, and long-term alignment across its operating platforms. Rather than functioning
+       as a passive parent entity, NIOSTGROUP International is intended to serve as the central
+       strategic and governance layer of the wider group.
       </motion.p>
-
+{/* 
       <motion.p
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const CompanyOverview = () => {
         transparency, accountability, and responsibility with modern execution
         strategies including modular program design, pilot validation, and
         scalable partnerships.
-      </motion.p>
+      </motion.p> */}
     </div>
   );
 };

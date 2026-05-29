@@ -800,7 +800,6 @@ const Navbar = () => {
             path: '/about',
             dropdown: [
                 { name: 'Company Overview', path: '/about#overview' },
-                { name: 'History / Timeline', path: '/about#history' },
                 { name: 'Mission & Vision', path: '/about#mission' },
                 { name: 'Leadership', path: '/about#leadership' },
             ]
