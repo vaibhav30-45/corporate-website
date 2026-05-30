@@ -1,34 +1,23 @@
-import img1 from "../../../../../assets/profile image.png";
-import img2 from "../../../../../assets/profile image (1).png";
-import img3 from "../../../../../assets/profile image (2).png";
-import img4 from "../../../../../assets/profile image (3).png";
+import img1 from "../../../../../assets/img1 (2).jpeg";
+import img2 from "../../../../../assets/juno.jpg.jpeg";
+
 
 /* ✅ BOARD DATA */
 export const boardMembers = [
   {
     id: 1,
-    name: "Neha Mehta",
-    role: "Chairman & Independent Director",
-    image: img1,
-  },
-  {
-    id: 2,
-    name: "Vikram Sinha",
-    role: "Managing Director and CEO",
+    name: "Juno Oosterwolde ",
+    role: "Founder and Group CEO, NIOSTGROUP International",
     image: img2,
   },
   {
-    id: 3,
-    name: "Anita Sharma",
-    role: "Independent Director and CEO",
-    image: img3,
+    id: 2,
+    name: " Alexandre Fernandes ",
+    role: " Group CTO, NIOSTGROUP International ",
+    image: img1,
   },
-  {
-    id: 4,
-    name: "Rohit Malhotra",
-    role: "Non-Executive Director and CEO",
-    image: img4,
-  },
+  
+
 ];
 
 /* ✅ ESG DATA */
@@ -36,24 +25,27 @@ export const esgData = [
   {
     id: 1,
     title: "Environmental",
-    desc: "We are committed to minimizing our environmental impact through responsible resource management.",
+    desc: "The group intends to integrate responsible environmental thinking into its development model, including efficient asset usage, practical sustainability awareness, and long-term value preservation. ",
   },
   {
     id: 2,
     title: "Social",
-    desc: "We value our people and communities. We foster diversity and contribute to society.",
+    desc: "The group aims to conduct its activities with respect for people, communities, and responsible employment practices across the markets in which it becomes active. ",
   },
   {
     id: 3,
     title: "Governance",
-    desc: "We uphold the highest standards of corporate governance, ethics, and transparency.",
+    desc: "Governance is the core pillar of the NIOSTGROUP model and is intended to guide ownership clarity, decision-making discipline, policy structure, and stakeholder accountability. ",
   },
 ];
 
 /* ✅ POLICIES DATA */
 export const policies = [
-  { id: 1, name: "Code of Conduct" },
-  { id: 2, name: "Data Privacy Policy" },
-  { id: 3, name: "Anti-Bribery Policy" },
-  { id: 4, name: "Whistleblower Policy" },
+ 
+  { id: 1, name: "Privacy Policy" },
+  { id: 2, name: "Terms & Conditions" },
+  { id: 3, name: "Cookie Policy" },
+  { id: 4, name: "Code of Conduct" },
+  { id: 5, name: "Anti-Corruption Policy" },
+  { id: 6, name: "Disclaimer" },
 ];

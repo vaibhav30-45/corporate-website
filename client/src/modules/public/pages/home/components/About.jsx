@@ -26,20 +26,31 @@ const About = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <h4 className="text-orange-500 font-semibold mb-2">About US</h4>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">Driving the Future</h2>
+          <h4 className="text-orange-500 font-semibold mb-2">About NIOSTGROUP</h4>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">A Structured Platform for Long-Term Growth </h2>
 
           <p className="text-gray-600 mb-6">
-            NIF is a multi-entity ecosystem focused on logistics,
-            social development, and education.
+            NIOSTGROUP International is being developed as a long-term,
+governance-first holding platform focused on operational discipline,
+strategic alignment, and sustainable international expansion.
+The organization is structured to create, oversee, and strengthen
+investment-ready operating platforms across logistics,
+infrastructure, digital ecosystems, and other high-impact sectors. 
+          </p>
+          <p className="text-gray-600 mb-6">
+            Through disciplined governance frameworks, scalable business
+structures, and long-term enterprise planning, NIOSTGROUP
+International aims to position its ventures for responsible growth,
+cross-border collaboration, and enduring market relevance across
+selected international regions.
           </p>
 
           {/* 🔥 BUTTON HOVER ANIMATION */}
-          <Link to="/about">
+          {/* <Link to="/about">
             <button className="bg-orange-500 text-white px-5 py-2 rounded hover:bg-orange-600 hover:scale-105 active:scale-95 transition">
               Learn More
             </button>
-          </Link>
+          </Link> */}
         </motion.div>
 
       </div>

@@ -13,8 +13,8 @@ const ContactPage = () => {
   title="Contact Us"
   description={
     <>
-      We’d love to hear from you. <br />
-      Reach out to us for any queries or collaborations.
+     For strategic enquiries, partnership discussions, or corporate communication,  <br />
+      please contact NIOSTGROUP International through the channels provided below. 
     </>
   }
   image={contactHero}
@@ -45,15 +45,15 @@ const ContactPage = () => {
                 🏢 Head Office
               </h4>
 
-              <p className="text-sm text-gray-700">
+              {/* <p className="text-sm text-gray-700">
                 Green Valley Industries Pvt. Ltd.
-              </p>
+              </p> */}
               <p className="text-sm text-gray-500">
-                123 Green Street, Eco Park
+               Australia
               </p>
-              <p className="text-sm text-gray-500 mb-3">
+              {/* <p className="text-sm text-gray-500 mb-3">
                 Mumbai - 400001, India
-              </p>
+              </p> */}
 
               <hr className="my-3" />
 
@@ -70,15 +70,15 @@ const ContactPage = () => {
                 🏢 Branch Office
               </h4>
 
-              <p className="text-sm text-gray-700">
+              {/* <p className="text-sm text-gray-700">
                 Green Valley Industries Pvt. Ltd.
-              </p>
+              </p> */}
               <p className="text-sm text-gray-500">
-                123 Green Street, Eco Park
+                Panama,Suriname,Guyana
               </p>
-              <p className="text-sm text-gray-500 mb-3">
+              {/* <p className="text-sm text-gray-500 mb-3">
                 Mumbai - 400001, India
-              </p>
+              </p> */}
 
               <hr className="my-3" />
 
@@ -115,22 +115,19 @@ const ContactPage = () => {
 
       {/* 📍 LOCATION */}
       <div className="w-full mx-auto px-8 sm:px-12 lg:px-20 pb-14">
-        <div className="bg-white border rounded-xl p-5 shadow-sm">
-
-          <h3 className="text-lg font-semibold text-gray-700">
-            Our Locations
-          </h3>
-          <p className="text-sm text-gray-500 mb-4">
-            Find us on the map below. We have offices in multiple locations.
-          </p>
-
-          <img
-            src={locationImg}
-            alt="location"
-            className="w-full h-[250px] sm:h-[320px] object-cover rounded-lg"
-          />
-
-        </div>
+      <div className="w-full h-[250px] sm:h-[320px] rounded-lg overflow-hidden">
+  <iframe
+    title="Australia Map"
+    src="https://www.google.com/maps?q=Australia&z=4&output=embed"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    className="rounded-lg"
+  />
+</div>
       </div>
 
     </div>

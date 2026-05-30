@@ -1,7 +1,8 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn,
+  FaYoutube, } from "react-icons/fa";
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 import logo from '../../../assets/logo.png';
 
@@ -23,20 +24,17 @@ const Footer = () => {
               alt="logo"
               className="w-full h-full object-contain"
             />
+            
           </div>
+           <p className="text-sm text-gray-300 leading-6 mb-6 max-w-xs">
+    NIOSTGROUP International is a governance-first multi-industry holding
+    company in formation, focused on building investment-ready platforms
+    across strategic and capital-intensive sectors.
+  </p>
+          
 
           {/* Social Icons */}
-          <div className="flex gap-5 text-2xl text-gray-300">
-            <a href="#" className="hover:text-white transition">
-              <FaFacebookF />
-            </a>
-            <a href="#" className="hover:text-white transition">
-              <FaTwitter />
-            </a>
-            <a href="#" className="hover:text-white transition">
-              <FaInstagram />
-            </a>
-          </div>
+          
 
         </div>
 
@@ -79,7 +77,30 @@ const Footer = () => {
               <MdEmail /> info@corporate.com
             </li>
           </ul>
+          <div className="mt-6 flex gap-4 text-xl text-gray-300">
+  <a href="#" className="hover:text-white transition">
+    <FaFacebookF />
+  </a>
+
+  <a href="#" className="hover:text-white transition">
+    <FaTwitter />
+  </a>
+
+  <a href="#" className="hover:text-white transition">
+    <FaInstagram />
+  </a>
+
+  <a href="#" className="hover:text-white transition">
+    <FaLinkedinIn />
+  </a>
+
+  <a href="#" className="hover:text-white transition">
+    <FaYoutube />
+  </a>
+</div>
+          
         </div>
+        
       </div>
 
       {/* LINE */}

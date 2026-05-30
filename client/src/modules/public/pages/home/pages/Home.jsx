@@ -6,7 +6,9 @@ const About = lazy(() => import("../components/About"));
 const CompanyOverview = lazy(() => import("../components/CompanyOverview"));
 const Sectors = lazy(() => import("../components/sectors"));
 const WhyChooseUs = lazy(() => import("../components/WhyChooseUs"));
+const GovernanceHighlight = lazy(() => import("../components/GovernanceHighlight"));
 const News = lazy(() => import("../components/News"));
+const ContactPreview = lazy(() => import("../components/ContactPreview"));
 
 const Home = () => {
   return (
@@ -22,7 +24,9 @@ const Home = () => {
       <CompanyOverview />
       <Sectors />
       <WhyChooseUs />
+      <GovernanceHighlight />
       <News />
+      <ContactPreview />
     </Suspense>
   );
 };
