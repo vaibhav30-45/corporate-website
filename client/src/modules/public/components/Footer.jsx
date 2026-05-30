@@ -51,7 +51,19 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* RESOURCES */}
+         <div>
+          <h3 className="font-semibold mb-4">Legal</h3>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li><Link to="legal/code-of-conduct" className="hover:text-orange-400">Code Of Conduct</Link></li>
+            <li><Link to="legal/privacy-policy" className="hover:text-orange-400">Privacy Policy</Link></li>
+            <li><Link to="legal/terms-and-conditions" className="hover:text-orange-400">Terms & Conditions</Link></li>
+            <li><Link to="legal/anti-corruption-policy" className="hover:text-orange-400">Anti-Corruption Policy</Link></li>
+            <li><Link to="legal/cookie-policy" className="hover:text-orange-400">Cookie Policy</Link></li>
+            <li><Link to="legal/disclaimer" className="hover:text-orange-400">Disclaimer</Link></li>
+          </ul>
+        </div>
+
+        {/* RESOURCES
         <div>
           <h3 className="font-semibold mb-4">Resources</h3>
           <ul className="space-y-2 text-sm text-gray-300">
@@ -61,7 +73,7 @@ const Footer = () => {
             <li><Link to="/privacy" className="hover:text-orange-400">Privacy Policy</Link></li>
             <li><Link to="/terms" className="hover:text-orange-400">Terms Conditions</Link></li>
           </ul>
-        </div>
+        </div> */}
 
         {/* CONTACT */}
         <div>

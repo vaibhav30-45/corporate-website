@@ -24,6 +24,12 @@ import Policies from "../modules/public/pages/governance/pages/Policies";
 import Compliance from "../modules/public/pages/governance/pages/Compliance";
 
 import About from '../modules/public/pages/about/pages/About';
+import CodeOfConduct from '../modules/public/pages/legal/CodeOfConduct';
+import PrivacyPolicy from '../modules/public/pages/legal/PrivacyPolicy';
+import TermsConditions from '../modules/public/pages/legal/TermsCondition';
+import AntiCorruptionPolicy from '../modules/public/pages/legal/AntiCorruptionPolicy';
+import CookiePolicy from '../modules/public/pages/legal/CookiePolicy';
+import Disclaimer from '../modules/public/pages/legal/Disclaimer';
 
 const SectorsPage = lazy(() => import('../modules/public/pages/sectors/Overview'));
 const LogisticsPage = lazy(() => import('../modules/public/pages/sectors/logistics/Overview'));
@@ -69,6 +75,14 @@ const PublicRoutes = () => {
                <Route path="/governance/policies" element={<Policies />} />
                <Route path="/governance/compliance" element={<Compliance />} />
 
+                {/*Legal Routes */}
+                <Route path="legal/code-of-conduct" element={<Suspense fallback={routeFallback}><CodeOfConduct /></Suspense>} />
+                <Route path="legal/privacy-policy" element={<Suspense fallback={routeFallback}><PrivacyPolicy /></Suspense>} />
+                <Route path="legal/terms-and-conditions" element={<Suspense fallback={routeFallback}><TermsConditions /></Suspense>} />
+                <Route path="legal/anti-corruption-policy" element={<Suspense fallback={routeFallback}><AntiCorruptionPolicy /></Suspense>} />
+                <Route path="legal/cookie-policy" element={<Suspense fallback={routeFallback}><CookiePolicy /></Suspense>} />
+                <Route path="legal/disclaimer" element={<Suspense fallback={routeFallback}><Disclaimer /></Suspense>} />
+
                 {/* News & Media Routes */}
                 <Route path="announcements" element={<Suspense fallback={routeFallback}><NewsMedia /></Suspense>} />
                 <Route path="announcements/blogs" element={<Suspense fallback={routeFallback}><NewsMedia /></Suspense>} />
@@ -85,6 +99,8 @@ const PublicRoutes = () => {
 
                 {/* Contact Route */}
                 <Route path="contact" element={<ContactInfo />} />
+
+
 
                 {/* 404 Route */}
                 <Route path="*" element={<div className="pt-24 text-center text-2xl font-bold">404 - Page Not Found</div>} />
