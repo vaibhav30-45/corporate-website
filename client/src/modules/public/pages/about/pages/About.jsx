@@ -9,6 +9,7 @@ import HistoryTimeline from "../../about/components/HistoryTimeLine";
 import MissionVision from "../../about/components/MissionVision";
 import Leadership from "../../about/components/Leadership";
 import HeroSection from "../../../components/HeroSection";
+import FoundingSection from "../components/FoundingSection";
 
 const About = () => {
   const location = useLocation();
@@ -26,11 +27,14 @@ const About = () => {
     <div className="bg-gray-100">
       <HeroSection
         title="About Us"
-        description="Learn more about our mission, values, and commitment to excellence in everything we do."
+        description={<>NIOSTGROUP International is a governance-first holding structure in formation. <br />It is being
+                    developed to establish and oversee investment-ready business platforms in sectors where
+                    structure, asset discipline, and long-term execution are essential.</>}
+                    
         image={about}
       />
       {/* 🔹 Who We Are */}
-      <div className="w-full mx-auto px-8 sm:px-12 lg:px-20 py-16 grid md:grid-cols-2 gap-12 items-center">
+      <div className="w-full bg-gray-50 mx-auto px-8 sm:px-12 lg:px-20 py-16 grid md:grid-cols-2 gap-12 items-center">
         {/* Image */}
         <div>
           <img
@@ -47,16 +51,10 @@ const About = () => {
           </h2>
 
           <p className="text-gray-600 mb-6 leading-relaxed">
-            We are a forward-thinking team of professionals committed to
-            delivering innovative, reliable, and scalable solutions across
-            multiple sectors. Our expertise lies in combining strategic insight
-            with practical execution, enabling businesses and communities to
-            grow sustainably. We focus on building long-term value by
-            understanding real-world challenges and designing solutions that are
-            not only effective but also adaptable to changing environments.
-            Through collaboration, integrity, and a results-driven approach, we
-            strive to empower organizations, enhance operational efficiency, and
-            create meaningful impact at every level.
+             NIOSTGROUP International is a governance-first holding structure in formation, designed to
+             build investment-ready platforms across strategic and capital-intensive sectors. Through
+            disciplined governance, structured expansion, and long-term enterprise alignment, the group
+            is being positioned for responsible international growth.
           </p>
           {/* 
           <div className="grid sm:grid-cols-2 gap-6">
@@ -82,7 +80,7 @@ const About = () => {
       </div>
 
       {/* 🔹 Achievements */}
-      <div className="bg-white py-16">
+      {/* <div className="bg-white py-16">
         <div className="w-full mx-auto px-8 sm:px-12 lg:px-20 text-center">
           <h2 className="text-3xl font-semibold text-orange-500 mb-12">
             Our Achievements
@@ -110,18 +108,22 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <section id="overview">
         <CompanyOverview />
       </section>
 
-      <section id="history">
+      {/* <section id="history">
         <HistoryTimeline />
-      </section>
+      </section> */}
 
       <section id="mission">
         <MissionVision />
+      </section>
+
+      <section id="founding">
+        <FoundingSection />
       </section>
 
       <section id="leadership">

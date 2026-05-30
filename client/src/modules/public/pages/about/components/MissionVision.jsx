@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 
 const MissionVision = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 bg-gray-50">
       <div className="w-full mx-auto px-8 sm:px-12 lg:px-20 grid md:grid-cols-2 gap-10">
 
         {[
           {
             title: "Our Mission",
-            text: "To enable inclusive infrastructure that supports sustainable development and long-term societal resilience, particularly for underserved communities.",
+            text: "To build governance-led, asset-backed platforms that support disciplined growth, operating resilience, and long-term stakeholder value.",
           },
           {
             title: "Our Vision",
-            text: "To create a future where individuals and businesses can participate in economic systems through fair access, reliable structures, and sustainable opportunities.",
+            text: "To become a trusted international holding group known for structured growth, responsible governance, and investment-ready platform development.",
           },
         ].map((item, i) => (
           <motion.div
