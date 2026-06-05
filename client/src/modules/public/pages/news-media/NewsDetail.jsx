@@ -1,9 +1,10 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { blogData, newsData } from './data/dummyData';
-import { getBlogBySlug, getBlogs } from '../../../../services/blogService';
-import { getNewsBySlug, getAllNews } from '../../../../services/newsService';
+import React, { useEffect, useMemo, useState } from "react";
+import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { blogData, newsData } from "./data/dummyData";
+import { getBlogBySlug, getBlogs } from "../../../../services/blogService";
+import { getNewsBySlug, getAllNews } from "../../../../services/newsService";
+import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const NewsDetail = () => {
   const { id: slug } = useParams(); // Using 'id' parameter as slug
@@ -13,9 +14,9 @@ const NewsDetail = () => {
   const [relatedArticles, setRelatedArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const isBlog = location.pathname.includes('/blogs/');
-  const isPressRelease = location.pathname.includes('/press-releases/');
-  const isAnnouncement = location.pathname.includes('/announcements/');
+  const isBlog = location.pathname.includes("/blogs/");
+  const isPressRelease = location.pathname.includes("/press-releases/");
+  const isAnnouncement = location.pathname.includes("/announcements/");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,26 +29,26 @@ const NewsDetail = () => {
         } else {
           data = await getNewsBySlug(slug);
         }
-        
+
         if (data) {
           setItem(data);
         } else {
-          navigate('/news');
+          navigate("/news");
         }
       } catch (error) {
         console.error("Error fetching detail:", error);
         // Fallback to dummy data
         let foundItem;
         if (isBlog) {
-          foundItem = blogData.find(b => b.slug === slug);
+          foundItem = blogData.find((b) => b.slug === slug);
         } else {
-          foundItem = newsData.find(n => n.slug === slug);
+          foundItem = newsData.find((n) => n.slug === slug);
         }
-        
+
         if (foundItem) {
           setItem(foundItem);
         } else {
-          navigate('/news');
+          navigate("/news");
         }
       } finally {
         setLoading(false);
@@ -66,36 +67,34 @@ const NewsDetail = () => {
         let allArticles = [];
         if (isBlog) {
           const blogs = await getBlogs();
-          allArticles = (Array.isArray(blogs) ? blogs : []).map(blog => ({
+          allArticles = (Array.isArray(blogs) ? blogs : []).map((blog) => ({
             ...blog,
-            type: 'blog',
-            displayImage: blog.bannerImage || blog.image
+            type: "blog",
+            displayImage: blog.bannerImage || blog.image,
           }));
         } else {
           const news = await getAllNews();
-          allArticles = (Array.isArray(news) ? news : []).map(n => ({
+          allArticles = (Array.isArray(news) ? news : []).map((n) => ({
             ...n,
-            type: n.type || 'press-release',
-            displayImage: n.image
+            type: n.type || "press-release",
+            displayImage: n.image,
           }));
         }
 
-        const related = allArticles
-          .filter(i => i.slug !== slug)
-          .slice(0, 3);
-        
+        const related = allArticles.filter((i) => i.slug !== slug).slice(0, 3);
+
         setRelatedArticles(related);
       } catch (error) {
         console.error("Error fetching related articles:", error);
         // Fallback to dummy data
         let allArticles = isBlog ? blogData : newsData;
         const related = allArticles
-          .filter(i => i.slug !== slug)
+          .filter((i) => i.slug !== slug)
           .slice(0, 3)
-          .map(a => ({
+          .map((a) => ({
             ...a,
-            type: a.type || (isBlog ? 'blog' : 'press-release'),
-            displayImage: a.bannerImage || a.image
+            type: a.type || (isBlog ? "blog" : "press-release"),
+            displayImage: a.bannerImage || a.image,
           }));
         setRelatedArticles(related);
       }
@@ -104,25 +103,28 @@ const NewsDetail = () => {
     fetchRelated();
   }, [item, slug, isBlog]);
 
-  if (loading) return (
-    <div className="min-h-screen flex items-center justify-center">
+  if (loading)
+    return (
+      <div className="min-h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-corporate-orange"></div>
-    </div>
-  );
+      </div>
+    );
 
   if (!item) return null;
 
   // Map fields based on model type
   const displayTitle = item.title;
   const displayImage = item.bannerImage || item.image;
-  const displayDate = new Date(item.date || item.publishedAt).toLocaleDateString('en-GB', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric'
+  const displayDate = new Date(
+    item.date || item.publishedAt,
+  ).toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
   });
-  const displayAuthor = item.author || 'Corporate Communications';
+  const displayAuthor = item.author || "Corporate Communications";
   const displayCategory = item.category;
-  const readTime = item.readTime || '5 min read';
+  const readTime = item.readTime || "5 min read";
 
   return (
     <div className="min-h-screen bg-white mt-20">
@@ -138,7 +140,7 @@ const NewsDetail = () => {
         />
         <div className="absolute inset-0 bg-corporate-navy/40"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-corporate-navy via-transparent to-transparent opacity-90"></div>
-        
+
         <div className="absolute bottom-0 left-0 w-full p-8 md:p-16">
           <div className="w-full  mx-auto px-8 sm:px-12 lg:px-20">
             <motion.div
@@ -152,8 +154,18 @@ const NewsDetail = () => {
                   {displayCategory}
                 </span>
                 <span className="text-gray-200 text-sm font-medium flex items-center">
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                   {readTime}
                 </span>
@@ -163,11 +175,17 @@ const NewsDetail = () => {
               </h1>
               <div className="flex items-center gap-4 text-gray-300">
                 <div className="w-10 h-10 rounded-full bg-corporate-orange/20 flex items-center justify-center border border-corporate-orange/50">
-                  <span className="text-corporate-orange font-bold text-lg">{displayAuthor.charAt(0)}</span>
+                  <span className="text-corporate-orange font-bold text-lg">
+                    {displayAuthor.charAt(0)}
+                  </span>
                 </div>
                 <div>
-                  <p className="font-bold text-white leading-none mb-1">{displayAuthor}</p>
-                  <p className="text-xs uppercase tracking-tighter">{displayDate}</p>
+                  <p className="font-bold text-white leading-none mb-1">
+                    {displayAuthor}
+                  </p>
+                  <p className="text-xs uppercase tracking-tighter">
+                    {displayDate}
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -180,18 +198,20 @@ const NewsDetail = () => {
         <div className="w-full  mx-auto px-8 sm:px-12 lg:px-20">
           <div className="flex flex-col lg:flex-row gap-16">
             {/* Left Column: Article Body */}
-            <motion.article 
+            <motion.article
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               className="lg:w-2/3"
             >
-              <div 
+              <div
                 className="rich-content"
                 dangerouslySetInnerHTML={{ __html: item.content }}
               />
-              
-              <style dangerouslySetInnerHTML={{ __html: `
+
+              <style
+                dangerouslySetInnerHTML={{
+                  __html: `
                 .rich-content h1, .rich-content h2, .rich-content h3 { 
                   color: #001a3d; 
                   font-weight: 700; 
@@ -266,29 +286,59 @@ const NewsDetail = () => {
                   color: inherit;
                   padding: 0;
                 }
-              `}} />
-              
+              `,
+                }}
+              />
+
               {/* Social Share / Tags */}
               <div className="mt-16 pt-8 border-t border-gray-100 flex flex-wrap items-center justify-between gap-6">
                 <div className="flex items-center gap-4">
-                  <span className="text-corporate-navy font-bold text-sm">Tags:</span>
+                  <span className="text-corporate-navy font-bold text-sm">
+                    Tags:
+                  </span>
                   <div className="flex gap-2">
-                    {(item.tags || ['Corporate', 'News']).map(tag => (
-                      <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-xs hover:bg-corporate-orange/10 hover:text-corporate-orange transition-colors cursor-pointer">
+                    {(item.tags || ["Corporate", "News"]).map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-gray-100 text-gray-500 rounded-full text-xs hover:bg-corporate-orange/10 hover:text-corporate-orange transition-colors cursor-pointer"
+                      >
                         #{tag}
                       </span>
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
-                  <span className="text-corporate-navy font-bold text-sm">Share:</span>
+                  <span className="text-corporate-navy font-bold text-sm">
+                    Share:
+                  </span>
                   <div className="flex gap-3">
-                    {['facebook', 'twitter', 'linkedin'].map(platform => (
-                      <button key={platform} className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-400 hover:text-corporate-orange hover:border-corporate-orange transition-all duration-300">
-                        <i className={`fab fa-${platform}`}></i>
-                      </button>
-                    ))}
+                    <a
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-primary hover:border-primary transition-all duration-300"
+                    >
+                      <FaFacebookF size={16} />
+                    </a>
+
+                    <a
+                      href={`https://twitter.com/intent/tweet?url=${window.location.href}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-primary hover:border-primary transition-all duration-300"
+                    >
+                      <FaTwitter size={16} />
+                    </a>
+
+                    <a
+                      href={`https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-9 h-9 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-primary hover:border-primary transition-all duration-300"
+                    >
+                      <FaLinkedinIn size={16} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -304,17 +354,23 @@ const NewsDetail = () => {
                     <span className="absolute -bottom-2 left-0 w-12 h-1 bg-corporate-orange rounded-full"></span>
                   </h4>
                   <div className="space-y-6">
-                    {relatedArticles.map(related => (
-                      <Link key={related.slug} to={`/news/${related.type}s/${related.slug}`} className="flex gap-4 group">
+                    {relatedArticles.map((related) => (
+                      <Link
+                        key={related.slug}
+                        to={`/announcements/${related.type}s/${related.slug}`}
+                        className="flex gap-4 group"
+                      >
                         <div className="w-24 h-20 shrink-0 overflow-hidden rounded-lg">
-                          <img 
-                            src={related.displayImage} 
-                            alt={related.title} 
+                          <img
+                            src={related.displayImage}
+                            alt={related.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                         </div>
                         <div>
-                          <p className="text-xs text-corporate-orange font-bold uppercase mb-1">{related.category}</p>
+                          <p className="text-xs text-corporate-orange font-bold uppercase mb-1">
+                            {related.category}
+                          </p>
                           <h5 className="text-sm font-bold text-corporate-navy group-hover:text-corporate-orange transition-colors line-clamp-2">
                             {related.title}
                           </h5>
@@ -327,17 +383,46 @@ const NewsDetail = () => {
                 {/* Newsletter Box */}
                 <div className="bg-corporate-navy rounded-2xl p-8 text-white relative overflow-hidden">
                   <div className="relative z-10">
-                    <h4 className="text-2xl font-bold mb-4">Stay Informed</h4>
+                    <h4 className="text-2xl font-bold text-black mb-4">
+                      Stay Informed
+                    </h4>
                     <p className="text-gray-400 text-sm mb-6">
-                      Subscribe to our newsletter for the latest updates and insights from GreenValley.
+                      Subscribe to our newsletter for the latest updates and
+                      insights from GreenValley.
                     </p>
                     <div className="space-y-3">
-                      <input 
-                        type="email" 
-                        placeholder="Email Address" 
-                        className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-corporate-orange"
+                      <input
+                        type="email"
+                        placeholder="Email Address"
+                        className="
+      w-full
+      bg-white
+      text-gray-900
+      border border-gray-300
+      rounded-lg
+      px-4 py-3
+      text-sm
+      placeholder:text-gray-500
+      focus:outline-none
+      focus:ring-2
+      focus:ring-primary
+    "
                       />
-                      <button className="w-full bg-corporate-orange text-white font-bold py-3 rounded-lg text-sm transition-transform active:scale-95 shadow-lg shadow-corporate-orange/10">
+
+                      <button
+                        className="
+      w-full
+      bg-primary
+      hover:bg-primary-hover
+      text-white
+      font-semibold
+      py-3
+      rounded-lg
+      transition-all
+      duration-300
+      active:scale-95
+    "
+                      >
                         Subscribe Now
                       </button>
                     </div>
@@ -350,19 +435,29 @@ const NewsDetail = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Newsletter / CTA Section (Alternative) */}
       <section className="py-20 bg-slate-50">
         <div className="w-full  mx-auto px-8 sm:px-12 lg:px-20 text-center">
-            <Link 
-                to="/news"
-                className="inline-flex items-center gap-2 text-corporate-navy font-bold hover:text-corporate-orange transition-colors"
+          <Link
+            to="/announcements"
+            className="inline-flex items-center gap-2 text-corporate-navy font-bold hover:text-corporate-orange transition-colors"
+          >
+            <svg
+              className="w-5 h-5 rotate-180"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-                <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-                Back to All News
-            </Link>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+            Back to All Insights
+          </Link>
         </div>
       </section>
     </div>

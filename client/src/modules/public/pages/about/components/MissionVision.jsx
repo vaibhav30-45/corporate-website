@@ -23,7 +23,7 @@ const MissionVision = () => {
             transition={{ delay: i * 0.2 }}
             className="p-8 bg-white rounded-xl shadow-lg border"
           >
-            <h3 className="text-2xl font-semibold text-orange-500 mb-4">
+            <h3 className="text-2xl font-semibold text-primary mb-4">
               {item.title}
             </h3>
             <p className="text-gray-600">{item.text}</p>

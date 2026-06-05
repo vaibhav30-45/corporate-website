@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn,
   FaYoutube, } from "react-icons/fa";
 import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
-import logo from '../../../assets/logo.png';
+import logo from '../../../assets/NiostGroup international logo.jpeg';
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
             
           </div>
            <p className="text-sm text-gray-300 leading-6 mb-6 max-w-xs">
-    NIOSTGROUP International is a governance-first multi-industry holding
+   NiostGroup International is a governance-first multi-industry holding
     company in formation, focused on building investment-ready platforms
     across strategic and capital-intensive sectors.
   </p>
@@ -42,24 +42,24 @@ const Footer = () => {
         <div>
           <h3 className="font-semibold mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><Link to="/" className="hover:text-orange-400">Home</Link></li>
-            <li><Link to="/about" className="hover:text-orange-400">About Us</Link></li>
-            <li><Link to="/sectors" className="hover:text-orange-400">Sectors</Link></li>
-            <li><Link to="/governance" className="hover:text-orange-400">Governance</Link></li>
-            <li><Link to="/news" className="hover:text-orange-400">News & Media</Link></li>
-            <li><Link to="/careers" className="hover:text-orange-400">Careers</Link></li>
+            <li><Link to="/" className="hover:text-primary-hover">Home</Link></li>
+            <li><Link to="/about" className="hover:text-primary-hover">About Us</Link></li>
+            <li><Link to="/sectors" className="hover:text-primary-hover">Sectors</Link></li>
+            <li><Link to="/governance" className="hover:text-primary-hover">Governance</Link></li>
+            <li><Link to="/news" className="hover:text-primary-hover">News & Media</Link></li>
+            <li><Link to="/careers" className="hover:text-primary-hover">Careers</Link></li>
           </ul>
         </div>
 
          <div>
           <h3 className="font-semibold mb-4">Legal</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li><Link to="legal/code-of-conduct" className="hover:text-orange-400">Code Of Conduct</Link></li>
-            <li><Link to="legal/privacy-policy" className="hover:text-orange-400">Privacy Policy</Link></li>
-            <li><Link to="legal/terms-and-conditions" className="hover:text-orange-400">Terms & Conditions</Link></li>
-            <li><Link to="legal/anti-corruption-policy" className="hover:text-orange-400">Anti-Corruption Policy</Link></li>
-            <li><Link to="legal/cookie-policy" className="hover:text-orange-400">Cookie Policy</Link></li>
-            <li><Link to="legal/disclaimer" className="hover:text-orange-400">Disclaimer</Link></li>
+            <li><Link to="legal/code-of-conduct" className="hover:text-primary-hover">Code Of Conduct</Link></li>
+            <li><Link to="legal/privacy-policy" className="hover:text-primary-hover">Privacy Policy</Link></li>
+            <li><Link to="legal/terms-and-conditions" className="hover:text-primary-hover">Terms & Conditions</Link></li>
+            <li><Link to="legal/anti-corruption-policy" className="hover:text-primary-hover">Anti-Corruption Policy</Link></li>
+            <li><Link to="legal/cookie-policy" className="hover:text-primary-hover">Cookie Policy</Link></li>
+            <li><Link to="legal/disclaimer" className="hover:text-primary-hover">Disclaimer</Link></li>
           </ul>
         </div>
 
@@ -117,7 +117,7 @@ const Footer = () => {
 
       {/* LINE */}
       <div className="border-t border-gray-600 mt-10 pt-4 text-center text-gray-400 text-sm">
-        <p>© 2026 NiostoGroup Inter Foundation. All rights reserved.</p>
+        <p>© 2026 NiostGroup Inter Foundation. All rights reserved.</p>
       </div>
     </footer>
   );

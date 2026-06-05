@@ -1,4 +1,4 @@
-const BoardCard = ({ name, role, image }) => {
+const BoardCard = ({ name, position, image }) => {
   return (
     <div className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300">
       
@@ -18,7 +18,7 @@ const BoardCard = ({ name, role, image }) => {
         </h3>
 
         <p className="text-sm text-gray-500 mt-1 leading-relaxed">
-          {role}
+          {position}
         </p>
       </div>
     </div>

@@ -76,7 +76,7 @@ const Compliance = () => {
           transition={{ duration: 0.6 }}
           className=""
         >
-          <h2 className="text-3xl font-semibold text-orange-500 mb-4">
+          <h2 className="text-3xl font-semibold text-primary mb-4">
             Our Approach to Compliance
           </h2>
 
@@ -112,7 +112,7 @@ const Compliance = () => {
                 <div className="flex items-start gap-4 mb-4">
 
                   <div className="bg-orange-50 p-3 rounded-lg">
-                    <Icon className="w-6 h-6 text-orange-500" />
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
 
                   <h3 className="text-xl font-semibold text-gray-800">

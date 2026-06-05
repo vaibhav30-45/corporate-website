@@ -8,6 +8,8 @@ import {
 
 import { Eye, Trash2, CheckCheck, MessageSquare, CheckCircle2 } from "lucide-react";
 import EnquiryDrawer from "../../admin/components/EnquiryDrawer";
+import { useNavigate } from "react-router-dom";
+
 
 const ITEMS_PER_PAGE = 5;
 
@@ -18,6 +20,8 @@ const AdminEnquiryPage = () => {
   const [selectedEnquiry, setSelectedEnquiry] = useState(null);
   const [filter, setFilter] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchEnquiries());

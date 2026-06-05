@@ -34,7 +34,7 @@ const CookiePolicy = () => {
               1. Introduction
             </h2>
             <p className="text-justify text-gray-600">
-              This Cookie Policy explains how NIOSTGROUP International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”) uses cookies and related technologies on <span className="text-gray-900 font-medium">www.niostgroupinternational.com</span> (“Website”). This Policy should be read together with the Group’s Privacy Policy.
+              This Cookie Policy explains how NiostGroup International (“NiostGroup”, “the Group”, “we”, “our”, or “us”) uses cookies and related technologies on <span className="text-gray-900 font-medium">www.niostgroupinternational.com</span> (“Website”). This Policy should be read together with the Group’s Privacy Policy.
             </p>
             <p className="text-gray-600">
               By continuing to use the Website, users acknowledge the use of cookies and related technologies as described in this Policy, subject to applicable browser and consent settings.
@@ -119,7 +119,7 @@ const CookiePolicy = () => {
               6. Third-Party Cookies
             </h2>
             <p className="text-gray-600 text-justify">
-              Some cookies or tracking technologies may be provided by third-party services associated with analytics, infrastructure, or Website functionality. Such third parties may maintain independent privacy and cookie practices. NIOSTGROUP International does not control third-party cookie policies and encourages users to review relevant external policies separately.
+              Some cookies or tracking technologies may be provided by third-party services associated with analytics, infrastructure, or Website functionality. Such third parties may maintain independent privacy and cookie practices. NiostGroup International does not control third-party cookie policies and encourages users to review relevant external policies separately.
             </p>
           </section>
 
@@ -149,7 +149,7 @@ const CookiePolicy = () => {
               9. International Operations
             </h2>
             <p className="text-gray-600 text-justify">
-              NIOSTGROUP International is being developed as an internationally oriented holding structure. Website technologies, analytics systems, hosting environments, or infrastructure providers may involve cross-border data processing and international operational support environments. Reasonable measures will be implemented to support responsible information handling practices.
+              NiostGroup International is being developed as an internationally oriented holding structure. Website technologies, analytics systems, hosting environments, or infrastructure providers may involve cross-border data processing and international operational support environments. Reasonable measures will be implemented to support responsible information handling practices.
             </p>
           </section>
 
@@ -190,7 +190,7 @@ const CookiePolicy = () => {
               For inquiries relating to this Cookie Policy:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm space-y-1 max-w-sm">
-              <p className="font-bold text-gray-900">NIOSTGROUP International</p>
+              <p className="font-bold text-gray-900">NiostGroup International</p>
               <p className="text-gray-600">Website: <a href="https://www.niostgroupinternational.com" target="_blank" rel="noreferrer" className="text-orange-600 hover:underline">www.niostgroupinternational.com</a></p>
               <p className="text-gray-600">Email: <a href="mailto:info@niostgroupinternational.com" className="text-orange-600 hover:underline">info@niostgroupinternational.com</a></p>
             </div>
@@ -202,7 +202,7 @@ const CookiePolicy = () => {
               13. Formation Notice
             </h3>
             <p className="text-orange-950 text-sm md:text-base text-justify leading-relaxed">
-              NIOSTGROUP International is currently in formation. Certain operational, legal, governance, and technological structures referenced throughout the Website may evolve following formal establishment of relevant entities and operational platforms.
+              NiostGroup International is currently in formation. Certain operational, legal, governance, and technological structures referenced throughout the Website may evolve following formal establishment of relevant entities and operational platforms.
             </p>
           </section>
 

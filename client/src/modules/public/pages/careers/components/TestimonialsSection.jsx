@@ -30,7 +30,7 @@ const TestimonialsSection = () => {
         <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
 
           <div>
-            <h2 className="text-xl sm:text-2xl font-bold text-orange-500">
+            <h2 className="text-xl sm:text-2xl font-bold text-primary">
               Testimonials
             </h2>
             <p className="text-gray-500 text-sm">

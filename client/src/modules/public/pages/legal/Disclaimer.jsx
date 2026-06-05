@@ -34,7 +34,7 @@ const Disclaimer = () => {
               1. Introduction
             </h2>
             <p className="text-justify text-gray-600">
-              This Disclaimer governs the use of the website <span className="text-gray-900 font-medium">www.niostgroupinternational.com</span> (“Website”) operated by NIOSTGROUP International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”).
+              This Disclaimer governs the use of the website <span className="text-gray-900 font-medium">www.niostgroupinternational.com</span> (“Website”) operated by NiostGroup International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”).
             </p>
             <p className="text-gray-600">
               By accessing or using this Website, users acknowledge and accept the terms of this Disclaimer. If a user does not agree with this Disclaimer, the Website should not be used.
@@ -47,7 +47,7 @@ const Disclaimer = () => {
               2. Formation Status
             </h2>
             <p className="text-justify text-gray-600">
-              NIOSTGROUP International is currently in formation as a governance-first international holding structure. Information presented on this Website may include references to:
+              NiostGroup International is currently in formation as a governance-first international holding structure. Information presented on this Website may include references to:
             </p>
             <ul className="list-disc pl-6 space-y-1.5 text-gray-600">
               <li>Intended governance structures and strategic sectors</li>
@@ -79,7 +79,7 @@ const Disclaimer = () => {
               4. No Regulated Financial Services
             </h2>
             <p className="text-gray-600 border-l-2 border-orange-400 pl-4 italic text-justify">
-              References to financial infrastructure, FinTech, or strategic financial sectors are descriptive and strategic in nature only. NIOSTGROUP International does not currently provide regulated financial services through this Website.
+              References to financial infrastructure, FinTech, or strategic financial sectors are descriptive and strategic in nature only. NiostGroup International does not currently provide regulated financial services through this Website.
             </p>
           </section>
 
@@ -89,7 +89,7 @@ const Disclaimer = () => {
               5. Forward-Looking Statements
             </h2>
             <p className="text-gray-600 text-justify">
-              The Website may contain forward-looking statements relating to: strategic objectives, governance models, operational plans, market positioning, international growth, infrastructure development, future sectors, partnerships, and anticipated activities. Actual outcomes may differ materially from expectations or projections. NIOSTGROUP International undertakes no obligation to update forward-looking statements except where legally required.
+              The Website may contain forward-looking statements relating to: strategic objectives, governance models, operational plans, market positioning, international growth, infrastructure development, future sectors, partnerships, and anticipated activities. Actual outcomes may differ materially from expectations or projections. NiostGroup International undertakes no obligation to update forward-looking statements except where legally required.
             </p>
           </section>
 
@@ -102,7 +102,7 @@ const Disclaimer = () => {
               The Website may contain references or links to third-party websites, organizations, platforms, or external resources. Such references do not constitute endorsement, partnership, verification, sponsorship, or approval.
             </p>
             <p className="text-gray-600 pt-1">
-              NIOSTGROUP International is not responsible for:
+              NiostGroup International is not responsible for:
             </p>
             <ul className="list-disc pl-6 space-y-1.5 text-gray-600">
               <li>External content or third-party services</li>
@@ -120,7 +120,7 @@ const Disclaimer = () => {
               7. International Operations and Jurisdictions
             </h2>
             <p className="text-gray-600 text-justify">
-              NIOSTGROUP International is being developed with an international orientation involving multiple jurisdictions and strategic market interests. Website references to countries, markets, sectors, or international operations are informational only and do not necessarily indicate:
+              NiostGroup International is being developed with an international orientation involving multiple jurisdictions and strategic market interests. Website references to countries, markets, sectors, or international operations are informational only and do not necessarily indicate:
             </p>
             <ul className="list-disc pl-6 space-y-1.5 text-gray-600">
               <li>Operational presence or active market participation</li>
@@ -137,7 +137,7 @@ const Disclaimer = () => {
               8. Intellectual Property
             </h2>
             <p className="text-gray-600 text-justify">
-              All Website content, branding, governance materials, strategic frameworks, logos, graphics, text, and related materials remain the intellectual property of NIOSTGROUP International unless otherwise stated. Unauthorized use, reproduction, or distribution is prohibited.
+              All Website content, branding, governance materials, strategic frameworks, logos, graphics, text, and related materials remain the intellectual property of NiostGroup International unless otherwise stated. Unauthorized use, reproduction, or distribution is prohibited.
             </p>
           </section>
 
@@ -180,7 +180,7 @@ const Disclaimer = () => {
               For inquiries relating to this Disclaimer:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm space-y-1 max-w-sm">
-              <p className="font-bold text-gray-900">NIOSTGROUP International</p>
+              <p className="font-bold text-gray-900">NiostGroup International</p>
               <p className="text-gray-600">Website: <a href="https://www.niostgroupinternational.com" target="_blank" rel="noreferrer" className="text-orange-600 hover:underline">www.niostgroupinternational.com</a></p>
               <p className="text-gray-600">Email: <a href="mailto:info@niostgroupinternational.com" className="text-orange-600 hover:underline">info@niostgroupinternational.com</a></p>
             </div>
@@ -192,7 +192,7 @@ const Disclaimer = () => {
               13. Formation Notice
             </h3>
             <p className="text-orange-950 text-sm md:text-base text-justify leading-relaxed">
-              NIOSTGROUP International is currently in formation. Certain legal entities, governance frameworks, operational structures, strategic initiatives, and sector participation references described on this Website may evolve following formal incorporation, regulatory review, operational development, and institutional establishment processes.
+              NiostGroup International is currently in formation. Certain legal entities, governance frameworks, operational structures, strategic initiatives, and sector participation references described on this Website may evolve following formal incorporation, regulatory review, operational development, and institutional establishment processes.
             </p>
           </section>
 

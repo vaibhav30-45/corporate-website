@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-import about from "../../../../../assets/About.png";
+import about from "../../../../../assets/image 08 .jpg";
 import aboutwho from "../../../../../assets/who-we-are.png";
 import CompanyOverview from "../../about/components/CompanyOverview";
 import HistoryTimeline from "../../about/components/HistoryTimeLine";
@@ -27,7 +27,7 @@ const About = () => {
     <div className="bg-gray-100">
       <HeroSection
         title="About Us"
-        description={<>NIOSTGROUP International is a governance-first holding structure in formation. <br />It is being
+        description={<>NiostGroup International is a governance-first holding structure in formation. <br />It is being
                     developed to establish and oversee investment-ready business platforms in sectors where
                     structure, asset discipline, and long-term execution are essential.</>}
                     
@@ -46,12 +46,12 @@ const About = () => {
 
         {/* Content */}
         <div>
-          <h2 className="text-3xl font-semibold text-orange-500 mb-4">
+          <h2 className="text-3xl font-semibold text-primary mb-4">
             Who We Are
           </h2>
 
           <p className="text-gray-600 mb-6 leading-relaxed">
-             NIOSTGROUP International is a governance-first holding structure in formation, designed to
+             NiostGroup International is a governance-first holding structure in formation, designed to
              build investment-ready platforms across strategic and capital-intensive sectors. Through
             disciplined governance, structured expansion, and long-term enterprise alignment, the group
             is being positioned for responsible international growth.

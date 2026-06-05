@@ -1,1 +1,21 @@
 @import './styles/global.css';
+:root {
+  --primary: #B96937;
+  --primary-hover: #A04F23;
+
+  --btn-gradient: linear-gradient(
+    135deg,
+    #A04F23 0%,
+    #B96937 50%,
+    #D3854D 100%
+  );
+}
+.btn-gradient {
+  background: var(--btn-gradient);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  opacity: 0.9;
+}

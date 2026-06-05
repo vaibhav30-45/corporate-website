@@ -4,15 +4,13 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {
-    extend: {
-      colors: {
-        'corporate': {
-          'navy': '#001a3d',
-          'orange': '#ff7a00',
-        }
-      }
+ theme: {
+  extend: {
+    colors: {
+      primary: "#B96937",
+      "primary-hover": "#A04F23",
     },
   },
+},
   plugins: [],
 }

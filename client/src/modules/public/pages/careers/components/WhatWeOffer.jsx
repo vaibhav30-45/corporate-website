@@ -4,7 +4,7 @@ const data = [
   {
     title: "Career Growth",
     desc: "Opportunities for growth and advancement.",
-    icon: <TrendingUp className="text-orange-500" size={22} />,
+    icon: <TrendingUp className="text-primary" size={22} />,
   },
   {
     title: "Learning Development",
@@ -21,7 +21,7 @@ const data = [
 const WhatWeOffer = () => {
   return (
     <div className="px-6 md:px-16 py-12">
-      <h2 className="text-2xl font-bold text-orange-500 mb-6">
+      <h2 className="text-2xl font-bold text-primary mb-6">
         What We Offer
       </h2>
 

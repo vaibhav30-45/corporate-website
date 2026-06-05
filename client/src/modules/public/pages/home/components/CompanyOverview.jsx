@@ -4,7 +4,6 @@ const CompanyOverview = () => {
   return (
     <section className="py-16 bg-white">
       <div className="w-full  mx-auto px-8 sm:px-12 lg:px-20">
-
         {/* 🔥 HEADING ANIMATION */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -13,11 +12,16 @@ const CompanyOverview = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-orange-500">
-           Platform Development Approach
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-primary">
+            Strategic Development Framework
           </h2>
           <p className="text-gray-500 text-sm  mx-auto">
-           NIOSTGROUP International is being developed as a holding platform that creates and aligns operating businesses within a structured governance framework. <br />  Its first operating platform, NIOSTGROUP Logistics, reflects this approach through a governance-led model focused on certified container leasing, smart logistics assets, and corridor-based execution. 
+            NiostGroup International is being developed as a holding platform
+            that creates and aligns operating businesses within a structured
+            governance framework. <br /> Its first operating platform,
+            NiostGroup Logistics, reflects this approach through a
+            governance-led model focused on certified container leasing, smart
+            logistics assets, and corridor-based execution.
           </p>
         </motion.div>
 
@@ -31,17 +35,16 @@ const CompanyOverview = () => {
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.2
-              }
-            }
+                staggerChildren: 0.2,
+              },
+            },
           }}
         >
-
           {/* CARD 1 */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
             className="border p-6 rounded-lg text-center hover:shadow-lg transition"
           >
@@ -52,7 +55,9 @@ const CompanyOverview = () => {
             />
             <h3 className="font-semibold mb-2">Our Mission</h3>
             <p className="text-sm text-gray-500">
-             To build governance-led, asset-backed platforms that support disciplined growth, operating resilience, and long-term stakeholder value. 
+              To build governance-led, asset-backed platforms that support
+              disciplined growth, operating resilience, and long-term
+              stakeholder value.
             </p>
           </motion.div>
 
@@ -60,7 +65,7 @@ const CompanyOverview = () => {
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
             className="border p-6 rounded-lg text-center hover:shadow-lg transition"
           >
@@ -71,7 +76,9 @@ const CompanyOverview = () => {
             />
             <h3 className="font-semibold mb-2">Our Vision</h3>
             <p className="text-sm text-gray-500">
-              To become a trusted international holding group known for structured growth, responsible governance, and investment-ready platform development. 
+              To become a trusted international holding group known for
+              structured growth, responsible governance, and investment-ready
+              platform development.
             </p>
           </motion.div>
 
@@ -79,7 +86,7 @@ const CompanyOverview = () => {
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 50 },
-              visible: { opacity: 1, y: 0 }
+              visible: { opacity: 1, y: 0 },
             }}
             className="border p-6 rounded-lg text-center hover:shadow-lg transition"
           >
@@ -89,19 +96,17 @@ const CompanyOverview = () => {
               className="mx-auto mb-4"
             />
             <h3 className="font-semibold mb-2">Global Presence</h3>
-          <div className="flex flex-col gap-3 text-sm text-gray-500 mt-3">
+            <div className="flex flex-col gap-3 text-sm text-gray-500 mt-3">
+              <span className="flex items-center justify-center gap-2">
+                <span className="w-1.5 h-1.5 text-primary rounded-full"></span>
+                Australia, Panama
+              </span>
 
-  <span className="flex items-center justify-center gap-2">
-    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
-    Australia, Panama
-  </span>
-
-  <span className="flex items-center justify-center gap-2">
-    <span className="w-1.5 h-1.5 bg-orange-500 rounded-full"></span>
-    Suriname, Guyana
-  </span>
-
-</div>
+              <span className="flex items-center justify-center gap-2">
+                <span className="w-1.5 h-1.5 text-primary rounded-full"></span>
+                Suriname, Guyana
+              </span>
+            </div>
           </motion.div>
 
           {/* CARD 4 */}
@@ -122,9 +127,7 @@ const CompanyOverview = () => {
               Leveraging technology to drive growth and transformation.
             </p>
           </motion.div> */}
-
         </motion.div>
-
       </div>
     </section>
   );

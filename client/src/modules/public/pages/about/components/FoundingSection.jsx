@@ -28,9 +28,9 @@ const FoundingSection = () => {
           className="bg-white p-10 relative"
         >
           {/* Blue accent bar */}
-          <div className="absolute top-10 right-0 w-[3px] h-12 bg-orange-600 rounded-none" />
+          <div className="absolute top-10 right-0 w-[3px] h-12 bg-primary rounded-none" />
 
-          <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-orange-500 flex items-center gap-2 mb-5">
+          <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-primary flex items-center gap-2 mb-5">
             
             Founding Narrative
           </p>
@@ -49,7 +49,7 @@ const FoundingSection = () => {
               className=" text-gray-900"
               
             >
-              NIOSTGROUP International
+              NiostGroup International
             </em>{" "}
             is being formed to create a stronger alternative to loosely structured expansion models.
           </p>
@@ -74,7 +74,7 @@ const FoundingSection = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="bg-gray-50 p-10"
         >
-          <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-orange-500 flex items-center gap-2 mb-5">
+          <p className="text-[11px] font-bold tracking-[0.14em] uppercase text-primary flex items-center gap-2 mb-5">
             
             Core Values
           </p>

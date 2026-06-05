@@ -34,13 +34,13 @@ const PrivacyPolicy = () => {
               1. Introduction
             </h2>
             <p className="text-justify text-gray-600">
-              NIOSTGROUP International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”) respects the importance of privacy, responsible data governance, and transparent information handling practices.
+              NiostGroup International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”) respects the importance of privacy, responsible data governance, and transparent information handling practices.
             </p>
             <p className="text-justify text-gray-600">
               This Privacy Policy explains how information may be collected, used, stored, processed, disclosed, and protected when users access or interact with the website <span className="text-gray-900 font-medium">www.niostgroupinternational.com</span> (“Website”) and related communication channels.
             </p>
             <p className="text-gray-600">
-              NIOSTGROUP International is currently in formation as a governance-first international holding structure focused on the development of investment-oriented operating platforms across strategic and capital-intensive sectors. By using this Website, users acknowledge and accept the practices described in this Privacy Policy.
+              NiostGroup International is currently in formation as a governance-first international holding structure focused on the development of investment-oriented operating platforms across strategic and capital-intensive sectors. By using this Website, users acknowledge and accept the practices described in this Privacy Policy.
             </p>
           </section>
 
@@ -61,7 +61,7 @@ const PrivacyPolicy = () => {
               <li>Users communicating through digital channels associated with the Website</li>
             </ul>
             <p className="text-gray-600 pt-1">
-              This Policy applies solely to information collected through the Website and official communication channels controlled by NIOSTGROUP International.
+              This Policy applies solely to information collected through the Website and official communication channels controlled by NiostGroup International.
             </p>
           </section>
 
@@ -124,7 +124,7 @@ const PrivacyPolicy = () => {
               <li>Supporting governance, compliance administration, internal reporting, and analytics</li>
             </ul>
             <p className="text-gray-900 font-semibold bg-gray-50 p-3 rounded-lg border border-gray-100 mt-2">
-              💡 Note: NIOSTGROUP International does not sell personal information to third parties.
+              💡 Note: NiostGroup International does not sell personal information to third parties.
             </p>
           </section>
 
@@ -157,7 +157,7 @@ const PrivacyPolicy = () => {
               7. International Operations and Cross-Border Processing
             </h2>
             <p className="text-gray-600 text-justify">
-              NIOSTGROUP International is being developed as an internationally oriented holding structure. As the Group’s operational footprint evolves, information may be processed, stored, or accessed across multiple jurisdictions associated with the Group’s activities, service providers, infrastructure providers, or strategic operations.
+              NiostGroup International is being developed as an internationally oriented holding structure. As the Group’s operational footprint evolves, information may be processed, stored, or accessed across multiple jurisdictions associated with the Group’s activities, service providers, infrastructure providers, or strategic operations.
             </p>
             <p className="text-gray-600 text-justify">
               By using the Website, users acknowledge that information may be transferred internationally where operationally necessary. Reasonable measures will be taken to maintain appropriate standards of information protection.
@@ -170,7 +170,7 @@ const PrivacyPolicy = () => {
               8. Financial Infrastructure and Regulatory Positioning
             </h2>
             <p className="text-gray-600 text-justify border-l-2 border-orange-400 pl-4 italic">
-              References on the Website to financial infrastructure, FinTech, governance frameworks, or future strategic sectors are provided solely for informational and corporate positioning purposes. NIOSTGROUP International does not currently provide regulated financial services through this Website.
+              References on the Website to financial infrastructure, FinTech, governance frameworks, or future strategic sectors are provided solely for informational and corporate positioning purposes. NiostGroup International does not currently provide regulated financial services through this Website.
             </p>
           </section>
 
@@ -180,7 +180,7 @@ const PrivacyPolicy = () => {
               9. Data Security
             </h2>
             <p className="text-gray-600 text-justify">
-              NIOSTGROUP International seeks to implement reasonable administrative, organizational, and technical safeguards intended to protect information against unauthorized access, misuse, disclosure, alteration, destruction, and operational compromise.
+              NiostGroup International seeks to implement reasonable administrative, organizational, and technical safeguards intended to protect information against unauthorized access, misuse, disclosure, alteration, destruction, and operational compromise.
             </p>
             <p className="text-gray-600 text-justify">
               We care about keeping your Personal Data safe and secure. We also ensure that any service providers we work with protect your data in the same way we do. Our security measures include, but are not limited to, encryption, data masking, and access control. If you think your data has been misused, lost, or accessed without permission, please reach out to us at <a href="mailto:info@niostgroupinternational.com" className="text-orange-600 hover:underline">info@niostgroupinternational.com</a>.
@@ -193,7 +193,7 @@ const PrivacyPolicy = () => {
               10. Third-Party Services and External Links
             </h2>
             <p className="text-gray-600 text-justify">
-              The Website may contain links, integrations, or references to third-party services, platforms, or external websites. NIOSTGROUP International is not responsible for third-party privacy practices, external website content, independent data handling policies, or third-party operational conduct. Users should review the privacy policies of external platforms separately.
+              The Website may contain links, integrations, or references to third-party services, platforms, or external websites. NiostGroup International is not responsible for third-party privacy practices, external website content, independent data handling policies, or third-party operational conduct. Users should review the privacy policies of external platforms separately.
             </p>
           </section>
 
@@ -223,7 +223,7 @@ const PrivacyPolicy = () => {
               12. Children’s Privacy
             </h2>
             <p className="text-gray-600 text-justify">
-              The Website is not directed toward children or minors. NIOSTGROUP International does not knowingly collect personal information from individuals below the age required under applicable laws without appropriate authorization.
+              The Website is not directed toward children or minors. NiostGroup International does not knowingly collect personal information from individuals below the age required under applicable laws without appropriate authorization.
             </p>
           </section>
 
@@ -246,7 +246,7 @@ const PrivacyPolicy = () => {
               For privacy-related inquiries, requests, or communications:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm space-y-1 max-w-sm">
-              <p className="font-bold text-gray-900">NIOSTGROUP International</p>
+              <p className="font-bold text-gray-900">NiostGroup International</p>
               <p className="text-gray-600">Website: <a href="https://www.niostgroupinternational.com" target="_blank" rel="noreferrer" className="text-orange-600 hover:underline">www.niostgroupinternational.com</a></p>
               <p className="text-gray-600">Email: <a href="mailto:info@niostgroupinternational.com" className="text-orange-600 hover:underline">info@niostgroupinternational.com</a></p>
             </div>
@@ -258,7 +258,7 @@ const PrivacyPolicy = () => {
               15. Formation Notice
             </h3>
             <p className="text-orange-950 text-sm md:text-base text-justify leading-relaxed">
-              NIOSTGROUP International is currently in formation. Certain legal, regulatory, operational, structural, and jurisdictional details referenced throughout the Website and related materials may evolve following formal establishment of relevant entities, governance structures, and operational platforms.
+              NiostGroup International is currently in formation. Certain legal, regulatory, operational, structural, and jurisdictional details referenced throughout the Website and related materials may evolve following formal establishment of relevant entities, governance structures, and operational platforms.
             </p>
           </section>
 

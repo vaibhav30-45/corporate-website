@@ -1,5 +1,5 @@
-import img1 from "../../../../../assets/img1 (2).jpeg";
-import img2 from "../../../../../assets/juno.jpg.jpeg";
+import img1 from "../../../../../assets/imgg1.png";
+import img2 from "../../../../../assets/juno.png";
 
 
 /* ✅ BOARD DATA */
@@ -7,13 +7,13 @@ export const boardMembers = [
   {
     id: 1,
     name: "Juno Oosterwolde ",
-    role: "Founder and Group CEO, NIOSTGROUP International",
+    role: "Founder and Group CEO, NiostGroup International",
     image: img2,
   },
   {
     id: 2,
     name: " Alexandre Fernandes ",
-    role: " Group CTO, NIOSTGROUP International ",
+    role: " Group CTO, NiostGroup International ",
     image: img1,
   },
   
@@ -35,7 +35,7 @@ export const esgData = [
   {
     id: 3,
     title: "Governance",
-    desc: "Governance is the core pillar of the NIOSTGROUP model and is intended to guide ownership clarity, decision-making discipline, policy structure, and stakeholder accountability. ",
+    desc: "Governance is the core pillar of the NiostGroup model and is intended to guide ownership clarity, decision-making discipline, policy structure, and stakeholder accountability. ",
   },
 ];
 

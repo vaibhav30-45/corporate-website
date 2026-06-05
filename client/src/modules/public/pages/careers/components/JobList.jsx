@@ -36,7 +36,7 @@ const JobList = () => {
               className={`px-4 py-2 rounded border transition 
                 ${
                   currentPage === i + 1
-                    ? "bg-orange-500 text-white border-orange-500"
+                    ? "bg-primary text-white border-primary"
                     : "bg-white text-gray-600 hover:bg-gray-100"
                 }`}
             >

@@ -23,7 +23,7 @@ const JobCard = ({ job }) => {
       <div className="flex gap-4">
 
         {/* ICON */}
-        <div className="text-orange-500 text-2xl mt-1">
+        <div className="text-primary text-2xl mt-1">
           {"</>"}
         </div>
 

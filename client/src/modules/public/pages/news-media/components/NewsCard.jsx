@@ -3,18 +3,21 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const NewsCard = ({ item }) => {
-  const getBadgeColor = (type) => {
-    switch (type) {
-      case 'blog':
-        return 'bg-orange-500';
-      case 'press-release':
-        return 'bg-amber-600';
-      case 'announcement':
-        return 'bg-red-500';
-      default:
-        return 'bg-gray-500';
-    }
-  };
+  const getBadgeColor = () => {
+  return 'bg-[#B96937]';
+};
+  // const getBadgeColor = (type) => {
+  //   switch (type) {
+  //     case 'blog':
+  // return 'bg-[#B96937]';
+  //     case 'press-release':
+  //       return 'bg-amber-600';
+  //     case 'announcement':
+  //       return 'bg-red-500';
+  //     default:
+  //       return 'bg-gray-500';
+  //   }
+  // };
 
   // Use normalized fields from dummyData or API service
   const { 

@@ -35,11 +35,11 @@ const Sectors = () => {
 
         <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
           <div>
-            <h2 className="text-xl sm:text-2xl font-bold text-orange-500">
+            <h2 className="text-xl sm:text-2xl font-bold text-primary">
                Strategic Sectors Preview 
             </h2>
             <p className="text-gray-500 text-sm">
-             NIOSTGROUP International is being structured as a multi-industry holding group with a focus on sectors <br /> where governance, 
+             NiostGroup International is being structured as a multi-industry holding group with a focus on sectors <br /> where governance, 
              structure, and disciplined execution create long-term value. 
             </p>
           </div>

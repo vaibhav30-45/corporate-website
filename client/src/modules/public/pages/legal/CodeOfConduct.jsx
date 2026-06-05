@@ -34,7 +34,7 @@ const CodeOfConduct = () => {
               1. Introduction
             </h2>
             <p className="text-justify text-gray-600">
-              NIOSTGROUP International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”) is being developed as a governance-first international holding structure founded on principles of integrity, accountability, discipline, and responsible long-term value creation.
+              NiostGroup International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”) is being developed as a governance-first international holding structure founded on principles of integrity, accountability, discipline, and responsible long-term value creation.
             </p>
             <p className="text-gray-600">
               This Code of Conduct establishes the ethical and professional standards expected across the Group’s evolving operational, strategic, and governance environments. The purpose of this Code is to support:
@@ -54,7 +54,7 @@ const CodeOfConduct = () => {
               2. Scope
             </h2>
             <p className="text-justify text-gray-600">
-              This Code applies, where relevant, to: founders, directors, officers, employees, advisors, consultants, contractors, strategic partners, representatives, and associated stakeholders interacting with or representing <span className="font-medium text-gray-900">NIOSTGROUP International</span>.
+              This Code applies, where relevant, to: founders, directors, officers, employees, advisors, consultants, contractors, strategic partners, representatives, and associated stakeholders interacting with or representing <span className="font-medium text-gray-900">NiostGroup International</span>.
             </p>
             <p className="text-gray-600">
               Third parties working with the Group are expected to uphold standards consistent with this Code.
@@ -67,7 +67,7 @@ const CodeOfConduct = () => {
               3. Core Principles
             </h2>
             <p className="text-gray-600">
-              NIOSTGROUP International seeks to operate in accordance with the following foundational principles:
+              NiostGroup International seeks to operate in accordance with the following foundational principles:
             </p>
             
             <div className="space-y-4 pl-2">
@@ -110,7 +110,7 @@ const CodeOfConduct = () => {
               5. Anti-Corruption and Ethical Conduct
             </h2>
             <p className="text-gray-600">
-              NIOSTGROUP International maintains a zero-tolerance approach toward:
+              NiostGroup International maintains a zero-tolerance approach toward:
             </p>
             <ul className="list-disc pl-6 space-y-1 text-gray-600">
               <li>Bribery</li>
@@ -132,7 +132,7 @@ const CodeOfConduct = () => {
               6. Conflicts of Interest
             </h2>
             <p className="text-gray-600 text-justify">
-              Individuals associated with the Group are expected to avoid situations where personal interests conflict, or appear to conflict, with the interests of NIOSTGROUP International. Potential conflicts should be disclosed through appropriate governance or management channels where applicable.
+              Individuals associated with the Group are expected to avoid situations where personal interests conflict, or appear to conflict, with the interests of NiostGroup International. Potential conflicts should be disclosed through appropriate governance or management channels where applicable.
             </p>
           </section>
 
@@ -152,7 +152,7 @@ const CodeOfConduct = () => {
               8. Respectful Workplace and Professional Environment
             </h2>
             <p className="text-gray-600 text-justify">
-              NIOSTGROUP International seeks to encourage professional and respectful interaction across all environments associated with the Group. The following conduct is inconsistent with this Code: discrimination, harassment, intimidation, abusive conduct, retaliation, or unethical treatment of individuals. Professional conduct is expected regardless of: nationality, background, gender, religion, ethnicity, or professional status.
+              NiostGroup International seeks to encourage professional and respectful interaction across all environments associated with the Group. The following conduct is inconsistent with this Code: discrimination, harassment, intimidation, abusive conduct, retaliation, or unethical treatment of individuals. Professional conduct is expected regardless of: nationality, background, gender, religion, ethnicity, or professional status.
             </p>
           </section>
 
@@ -202,7 +202,7 @@ const CodeOfConduct = () => {
               <li>Or serious operational concerns</li>
             </ul>
             <p className="text-gray-600 pt-1">
-              through appropriate communication channels where available. NIOSTGROUP International seeks to support responsible reporting conducted in good faith.
+              through appropriate communication channels where available. NiostGroup International seeks to support responsible reporting conducted in good faith.
             </p>
           </section>
 
@@ -222,7 +222,7 @@ const CodeOfConduct = () => {
               13. Third-Party Expectations
             </h2>
             <p className="text-gray-600">
-              Business partners, advisors, contractors, and external representatives associated with NIOSTGROUP International are expected to operate in a manner consistent with:
+              Business partners, advisors, contractors, and external representatives associated with NiostGroup International are expected to operate in a manner consistent with:
             </p>
             <ul className="list-disc pl-6 space-y-1 text-gray-600">
               <li>Lawful conduct</li>
@@ -241,7 +241,7 @@ const CodeOfConduct = () => {
               14. International Operations
             </h2>
             <p className="text-gray-600">
-              As an internationally oriented holding structure, NIOSTGROUP International recognizes the importance of respecting:
+              As an internationally oriented holding structure, NiostGroup International recognizes the importance of respecting:
             </p>
             <ul className="list-disc pl-6 space-y-1 text-gray-600">
               <li>Cross-border legal standards</li>
@@ -270,7 +270,7 @@ const CodeOfConduct = () => {
               For governance or conduct-related inquiries:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm space-y-1 max-w-sm">
-              <p className="font-bold text-gray-900">NIOSTGROUP International</p>
+              <p className="font-bold text-gray-900">NiostGroup International</p>
               <p className="text-gray-600">Website: <a href="https://www.niostgroupinternational.com" target="_blank" rel="noreferrer" className="text-orange-600 hover:underline">www.niostgroupinternational.com</a></p>
               <p className="text-gray-600">Email: <a href="mailto:info@niostgroupinternational.com" className="text-orange-600 hover:underline">info@niostgroupinternational.com</a></p>
             </div>
@@ -282,7 +282,7 @@ const CodeOfConduct = () => {
               17. Formation Notice
             </h3>
             <p className="text-orange-950 text-sm md:text-base text-justify leading-relaxed">
-              NIOSTGROUP International is currently in formation. Certain governance structures, operational procedures, reporting frameworks, and institutional controls referenced in this Code may continue to evolve following formal establishment of relevant entities and operating platforms.
+              NiostGroup International is currently in formation. Certain governance structures, operational procedures, reporting frameworks, and institutional controls referenced in this Code may continue to evolve following formal establishment of relevant entities and operating platforms.
             </p>
           </section>
 

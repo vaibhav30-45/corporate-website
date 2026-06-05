@@ -34,7 +34,7 @@ const TermsConditions = () => {
               1. Introduction
             </h2>
             <p className="text-justify text-gray-600">
-              These Terms & Conditions (“Terms”) govern access to and use of the website <span className="text-gray-900 font-medium">www.niostgroupinternational.com</span> (“Website”) operated by NIOSTGROUP International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”).
+              These Terms & Conditions (“Terms”) govern access to and use of the website <span className="text-gray-900 font-medium">www.niostgroupinternational.com</span> (“Website”) operated by NiostGroup International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”).
             </p>
             <p className="text-gray-600">
               By accessing, browsing, or using this Website, users acknowledge that they have read, understood, and agreed to comply with these Terms. If a user does not agree with these Terms, the Website should not be used.
@@ -47,7 +47,7 @@ const TermsConditions = () => {
               2. Corporate Status and Formation Notice
             </h2>
             <p className="text-justify text-gray-600">
-              NIOSTGROUP International is currently in formation as a governance-first international holding structure. Certain information presented throughout the Website may reference intended operational structures, strategic sectors, governance objectives, future platforms, or development initiatives that remain subject to:
+              NiostGroup International is currently in formation as a governance-first international holding structure. Certain information presented throughout the Website may reference intended operational structures, strategic sectors, governance objectives, future platforms, or development initiatives that remain subject to:
             </p>
             <ul className="list-disc pl-6 space-y-1.5 text-gray-600">
               <li>Corporate formation processes</li>
@@ -79,7 +79,7 @@ const TermsConditions = () => {
               References to financial infrastructure, FinTech, governance-led financial structures, strategic financial sectors, and cross-border platform development are descriptive and strategic in nature only.
             </p>
             <p className="text-gray-600 border-l-2 border-orange-400 pl-4 italic">
-              NIOSTGROUP International does not currently provide regulated financial services through this Website.
+             NiostGroup International does not currently provide regulated financial services through this Website.
             </p>
           </section>
 
@@ -99,7 +99,7 @@ const TermsConditions = () => {
               <li>Interfere with security measures</li>
             </ul>
             <p className="text-gray-600 pt-1">
-              NIOSTGROUP International reserves the right to restrict or terminate access where misuse is identified.
+              NiostGroup International reserves the right to restrict or terminate access where misuse is identified.
             </p>
           </section>
 
@@ -109,7 +109,7 @@ const TermsConditions = () => {
               6. Intellectual Property Rights
             </h2>
             <p className="text-gray-600">
-              Unless otherwise stated, all Website materials are the intellectual property of NIOSTGROUP International or its licensors, including:
+              Unless otherwise stated, all Website materials are the intellectual property of NiostGroup International or its licensors, including:
             </p>
             <ul className="list-disc pl-6 space-y-1.5 text-gray-600">
               <li>Brand identity, logos, text, graphics, and design elements</li>
@@ -138,7 +138,7 @@ const TermsConditions = () => {
               8. Third-Party Links and External Resources
             </h2>
             <p className="text-gray-600 text-justify">
-              The Website may contain references or links to third-party websites, platforms, resources, or services. Such references are provided for convenience only and do not constitute endorsement, partnership, verification, approval, or responsibility for external content. NIOSTGROUP International is not responsible for the availability, accuracy, legality, or practices of third-party platforms. Users access external resources at their own risk.
+              The Website may contain references or links to third-party websites, platforms, resources, or services. Such references are provided for convenience only and do not constitute endorsement, partnership, verification, approval, or responsibility for external content. NiostGroup International is not responsible for the availability, accuracy, legality, or practices of third-party platforms. Users access external resources at their own risk.
             </p>
           </section>
 
@@ -148,7 +148,7 @@ const TermsConditions = () => {
               9. Limitation of Liability
             </h2>
             <p className="text-gray-600 text-justify">
-              To the maximum extent permitted under applicable law, NIOSTGROUP International shall not be liable for any direct, indirect, incidental, consequential, special, or commercial damages arising from use of the Website, reliance on Website content, technical interruptions, inaccuracies, omissions, security incidents, or unavailability.
+              To the maximum extent permitted under applicable law, NiostGroup International shall not be liable for any direct, indirect, incidental, consequential, special, or commercial damages arising from use of the Website, reliance on Website content, technical interruptions, inaccuracies, omissions, security incidents, or unavailability.
             </p>
             <p className="text-gray-900 font-semibold bg-gray-50 p-3 rounded-lg border border-gray-100 mt-2">
               ⚠️ Disclaimer: The Website and its contents are provided on an “as-is” and “as-available” basis without warranties of any kind.
@@ -171,7 +171,7 @@ const TermsConditions = () => {
               11. International Nature of Operations
             </h2>
             <p className="text-gray-600 text-justify">
-              NIOSTGROUP International is being developed with an international orientation involving multiple jurisdictions and strategic market interests. Website access from different jurisdictions is undertaken at the user’s own initiative and responsibility. Users are responsible for compliance with applicable local laws where relevant.
+              NiostGroup International is being developed with an international orientation involving multiple jurisdictions and strategic market interests. Website access from different jurisdictions is undertaken at the user’s own initiative and responsibility. Users are responsible for compliance with applicable local laws where relevant.
             </p>
           </section>
 
@@ -181,7 +181,7 @@ const TermsConditions = () => {
               12. Modification of Terms
             </h2>
             <p className="text-gray-600 text-justify">
-              NIOSTGROUP International reserves the right to modify, update, revise, or replace these Terms at any time without prior notice. Updated versions may be published on the Website. Continued use of the Website following updates constitutes acceptance of revised Terms.
+              NiostGroup International reserves the right to modify, update, revise, or replace these Terms at any time without prior notice. Updated versions may be published on the Website. Continued use of the Website following updates constitutes acceptance of revised Terms.
             </p>
           </section>
 
@@ -214,7 +214,7 @@ const TermsConditions = () => {
               For inquiries relating to these Terms:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm space-y-1 max-w-sm">
-              <p className="font-bold text-gray-900">NIOSTGROUP International</p>
+              <p className="font-bold text-gray-900">NiostGroup International</p>
               <p className="text-gray-600">Website: <a href="https://www.niostgroupinternational.com" target="_blank" rel="noreferrer" className="text-orange-600 hover:underline">www.niostgroupinternational.com</a></p>
               <p className="text-gray-600">Email: <a href="mailto:info@niostgroupinternational.com" className="text-orange-600 hover:underline">info@niostgroupinternational.com</a></p>
             </div>

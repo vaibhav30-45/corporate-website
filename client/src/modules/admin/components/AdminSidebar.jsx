@@ -14,8 +14,13 @@ import {
 const AdminSidebar = ({ isCollapsed, setIsCollapsed }) => {
     const menuItems = [
         { name: 'Dashboard', path: '/admin/dashboard', icon: <LayoutDashboard size={20} /> },
-        { name: 'Blogs', path: '/admin/blogs', icon: <FileText size={20} /> },
-        { name: 'News', path: '/admin/news', icon: <Layers size={20} /> },
+        { name: 'Insights', path: '/admin/blogs', icon: <FileText size={20} /> },
+        {
+    name: 'Leadership Team',
+    path: '/admin/leadership',
+    icon: <Users size={20} />
+},
+        // { name: 'News', path: '/admin/news', icon: <Layers size={20} /> },
         { name: 'Jobs', path: '/admin/jobs', icon: <Briefcase size={20} /> },
         { name: 'Job Applications', path: '/admin/applications', icon: <Users size={20} /> },
         { name: 'Enquiries', path: '/admin/enquiries', icon: <MessageSquare size={20} /> },
@@ -66,7 +71,7 @@ const AdminSidebar = ({ isCollapsed, setIsCollapsed }) => {
                         className={({ isActive }) => `
                             flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all
                             ${isActive
-                                ? 'bg-orange-500 text-white'
+                                ? 'bg-primary text-white'
                                 : 'text-gray-600 hover:bg-gray-100'}
                         `}
                     >

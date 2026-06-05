@@ -15,7 +15,7 @@ const ContactPreview = () => {
   transition={{ duration: 0.7 }}
   viewport={{ once: true }}
 >
-       <p className="text-orange-500 font-semibold uppercase tracking-[2px] mb-3">
+      <p className="text-primary font-semibold uppercase tracking-[2px] mb-3">
               Contact Preview
             </p>
 
@@ -25,29 +25,30 @@ const ContactPreview = () => {
 
             <p className="text-gray-600 leading-relaxed text-base sm:text-lg mb-8 max-w-2xl">
               For strategic enquiries, partnership discussions, or
-              corporate communication, please contact NIOSTGROUP
+              corporate communication, please contact NiostGroup
               International through the channels provided on the
               Contact page.
             </p>
 
             {/* BUTTONS */}
-            <motion.div
-  className="flex flex-wrap gap-4"
+           <motion.div
+  className="flex flex-row flex-wrap sm:flex-nowrap gap-2 sm:gap-4"
   initial={{ opacity: 0, y: 20 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: 0.4 }}
   viewport={{ once: true }}
->  <Link to="/contact">
-                <button className="bg-orange-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-orange-600 transition">
-                  Contact Us
-                </button>
-              </Link>
+>
+  <Link to="/contact">
+    <button className="btn-gradient px-3 sm:px-6 py-2 sm:py-3 rounded-lg text-xs sm:text-base font-medium whitespace-nowrap">
+      Contact Us
+    </button>
+  </Link>
 
-              <Link to="/contact">
-                <button className="border border-[#0c2438]/20 text-[#0c2438] px-6 py-3 rounded-lg font-medium hover:bg-[#0c2438] hover:text-white transition">
-                  View Contact Details
-                </button>
-              </Link>
+  <Link to="/contact">
+    <button className="border border-[#B96937] text-[#B96937] px-3 sm:px-6 py-2 sm:py-3 rounded-lg text-xs sm:text-base font-medium whitespace-nowrap hover:btn-gradient transition">
+      View Contact Details
+    </button>
+  </Link>
 </motion.div>
            
 </motion.div>

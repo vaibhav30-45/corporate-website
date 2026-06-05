@@ -20,8 +20,8 @@
 
 /* Global body styles */
 body {
-  @apply text-corporate-navy font-sans antialiased;
-  background-color: #fcfcfc;
+ @apply font-sans antialiased;
+color: #0c2438;;
 }
 
 /* Corporate gradient */

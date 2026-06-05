@@ -69,7 +69,7 @@ const EnquiryForm = ({ onSuccess }) => {
             value={form.name}
             onChange={handleChange}
             placeholder="Enter your full name"
-            className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-gray-50/50"
+            className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B96937]/20 focus:border-[#B96937] transition-all bg-gray-50/50"
           />
         </div>
 
@@ -83,7 +83,7 @@ const EnquiryForm = ({ onSuccess }) => {
             value={form.phone}
             onChange={handleChange}
             placeholder="Enter mobile number"
-            className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-gray-50/50"
+            className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B96937]/20 focus:border-[#B96937] transition-all bg-gray-50/50"
           />
         </div>
       </div>
@@ -98,7 +98,7 @@ const EnquiryForm = ({ onSuccess }) => {
       value={form.company}
       onChange={handleChange}
       placeholder="Enter company name"
-      className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-gray-50/50"
+      className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B96937]/20 focus:border-[#B96937] transition-all bg-gray-50/50"
     />
   </div>
 
@@ -112,7 +112,7 @@ const EnquiryForm = ({ onSuccess }) => {
       value={form.subject}
       onChange={handleChange}
       placeholder="Enter subject"
-      className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-gray-50/50"
+      className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B96937]/20 focus:border-[#B96937] transition-all bg-gray-50/50"
     />
   </div>
 </div>
@@ -127,7 +127,7 @@ const EnquiryForm = ({ onSuccess }) => {
           value={form.email}
           onChange={handleChange}
           placeholder="Enter your email address"
-          className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-gray-50/50"
+          className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B96937]/20 focus:border-[#B96937] transition-all bg-gray-50/50"
         />
       </div>
 
@@ -142,14 +142,14 @@ const EnquiryForm = ({ onSuccess }) => {
           onChange={handleChange}
           placeholder="How can we help you?"
           rows="4"
-          className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all bg-gray-50/50 resize-none"
+          className="w-full border border-gray-200 p-3.5 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#B96937]/20 focus:border-[#B96937] transition-all bg-gray-50/50 resize-none"
         />
       </div>
 
       {/* BUTTON */}
       <button
         disabled={loading}
-        className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 transition-all duration-300 text-white py-4 rounded-xl font-bold shadow-lg shadow-orange-500/30 hover:shadow-orange-500/40 active:scale-[0.98]"
+        className="w-full btn-gradient disabled:opacity-60 text-white py-4 rounded-xl font-bold shadow-lg active:scale-[0.98]"
       >
         {loading ? "Submitting..." : "Send Message"}
       </button>

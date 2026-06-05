@@ -4,7 +4,7 @@ const data = [
   {
     title: "Growth Opportunities",
     desc: "We provide continuous learning and career growth opportunities for all employees.",
-    icon: <TrendingUp className="text-orange-500" size={24} />,
+    icon: <TrendingUp className="text-primary" size={24} />,
   },
   {
     title: "Learning Environment",
@@ -23,7 +23,7 @@ const WhyWork = () => {
     <div className="bg-gray-50">
 
       {/* TITLE */}
-      <h2 className="text-2xl md:text-3xl font-bold text-orange-500 mb-10">
+      <h2 className="text-2xl md:text-3xl font-bold text-primary mb-10">
         Why Work With Us
       </h2>
 

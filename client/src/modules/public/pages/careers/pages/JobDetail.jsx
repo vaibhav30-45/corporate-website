@@ -55,11 +55,11 @@ const JobDetail = () => {
 
         <div className="absolute z-20 bottom-10 md:bottom-20 left-0 w-full flex justify-center md:justify-start px-4 sm:px-8 md:px-12 lg:px-20 gap-4">
           <button
-            onClick={handleApplyClick}
-            className="bg-orange-500 px-6 py-3 text-white font-bold rounded-lg shadow-lg hover:bg-orange-600 transition"
-          >
-            Apply Now
-          </button>
+  onClick={handleApplyClick}
+  className="btn-gradient px-6 py-3 text-white font-bold rounded-lg shadow-lg transition"
+>
+  Apply Now
+</button>
 
           <Link
             to="/careers"
@@ -72,7 +72,7 @@ const JobDetail = () => {
 
       {/* MAIN */}
       <div className="px-6 md:px-16 py-12 bg-gray-50">
-        <h2 className="text-2xl font-bold text-orange-500 mb-6">
+        <h2 className="text-2xl font-bold text-primary mb-6">
           Job Detail
         </h2>
 
@@ -128,7 +128,7 @@ const JobDetail = () => {
 
             <button
               onClick={handleApplyClick}
-              className="w-full bg-orange-500 px-5 py-2 text-white hover:bg-orange-600"
+              className="w-full bg-primary px-5 py-2 text-white hover:bg-primary-hover"
             >
               Apply Now
             </button>

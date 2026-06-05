@@ -16,7 +16,7 @@ const HistoryTimeline = () => {
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl font-bold text-orange-500 mb-12 text-center"
+          className="text-3xl font-bold text-primary mb-12 text-center"
         >
           Our Journey
         </motion.h2>
@@ -39,23 +39,23 @@ const HistoryTimeline = () => {
           </motion.div>
 
           {/* RIGHT SIDE TIMELINE */}
-          <div className="border-l-2 border-orange-400 pl-6 space-y-10">
-            {timeline.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.2 }}
-              >
-                <h3 className="font-bold text-lg text-gray-800">
-                  {item.year}
-                </h3>
-                <p className="text-gray-600">
-                  {item.text}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+         <div className="border-l-2 border-[#B96937] pl-6 space-y-10">
+  {timeline.map((item, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ delay: i * 0.2 }}
+    >
+      <h3 className="font-bold text-lg text-gray-800">
+        {item.year}
+      </h3>
+      <p className="text-gray-600">
+        {item.text}
+      </p>
+    </motion.div>
+  ))}
+</div>
 
         </div>
 

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Leaf, Users, Shield } from "lucide-react";
 
 const icons = {
-  Environmental: <Leaf className="text-orange-500" />,
+  Environmental: <Leaf className="text-primary" />,
   Social: <Users className="text-green-500" />,
   Governance: <Shield className="text-purple-500" />,
 };

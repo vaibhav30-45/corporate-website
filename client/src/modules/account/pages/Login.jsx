@@ -111,15 +111,17 @@ navigate('/admin/dashboard');
                         )}
 
                         <div>
-                            <button
-                                type="submit"
-                                disabled={loading}
-                                className={`w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-xl shadow-lg text-sm font-bold text-white transition-all
-                                    ${loading 
-                                        ? 'bg-gray-400 cursor-not-allowed' 
-                                        : 'bg-corporate-orange hover:bg-[#e66e00] hover:shadow-corporate-orange/30 active:scale-[0.98]'
-                                    }`}
-                            >
+                           <button
+  type="submit"
+  disabled={loading}
+  className={`w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-xl shadow-lg text-sm font-bold text-white transition-all
+    ${
+      loading
+        ? "bg-gray-400 cursor-not-allowed"
+        : "bg-primary hover:bg-primary-hover hover:shadow-orange-500/30 active:scale-[0.98]"
+    }
+  `}
+>
                                 {loading ? (
                                     <>
                                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>

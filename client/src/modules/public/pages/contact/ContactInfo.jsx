@@ -14,7 +14,7 @@ const ContactPage = () => {
   description={
     <>
      For strategic enquiries, partnership discussions, or corporate communication,  <br />
-      please contact NIOSTGROUP International through the channels provided below. 
+      please contact NiostGroup International through the channels provided below. 
     </>
   }
   image={contactHero}
@@ -41,7 +41,7 @@ const ContactPage = () => {
 
             {/* Head Office */}
             <div className="border rounded-xl p-5">
-              <h4 className="text-orange-500 font-semibold mb-2 flex items-center gap-2">
+              <h4 className="text-primary font-semibold mb-2 flex items-center gap-2">
                 🏢 Head Office
               </h4>
 
@@ -66,7 +66,7 @@ const ContactPage = () => {
 
             {/* Branch Office */}
             <div className="border rounded-xl p-5">
-              <h4 className="text-orange-500 font-semibold mb-2 flex items-center gap-2">
+              <h4 className="text-primary font-semibold mb-2 flex items-center gap-2">
                 🏢 Branch Office
               </h4>
 

@@ -33,7 +33,7 @@ const AdminLayout = () => {
 
          {/* Footer */}
                 <footer className="py-4 px-6 border-t border-gray-100 text-center text-xs text-gray-400 bg-white">
-                    &copy; {new Date().getFullYear()} Noisto Cooperative. Admin Management Panel.
+                    &copy; {new Date().getFullYear()} NiostGroup. Admin Management Panel.
                 </footer>
       </div>
     </div>

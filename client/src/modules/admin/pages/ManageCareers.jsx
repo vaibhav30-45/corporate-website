@@ -127,7 +127,7 @@ const AdminJobsPage = () => {
             setSelectedJob(null);
             setShowForm(true);
           }}
-          className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-lg shadow"
+          className="bg-primary hover:primary-hover text-white px-5 py-2 rounded-lg shadow"
         >
           + Add Job
         </button>

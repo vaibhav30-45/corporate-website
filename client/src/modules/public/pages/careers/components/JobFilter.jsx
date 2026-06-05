@@ -49,7 +49,7 @@ const JobFilter = () => {
       {/* CLEAR */}
       <button
         onClick={() => dispatch(clearFilter())}
-        className="text-orange-500 font-medium ml-auto"
+        className="text-primary font-medium ml-auto"
       >
         ✕ Clear Filter
       </button>

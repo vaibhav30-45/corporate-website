@@ -34,7 +34,7 @@ const AntiCorruptionPolicy = () => {
               1. Introduction
             </h2>
             <p className="text-justify text-gray-600">
-              NIOSTGROUP International (“NIOSTGROUP”, “the Group”, “we”, “our”, or “us”) is committed to maintaining high standards of integrity, transparency, accountability, and ethical business conduct across its evolving international operations and governance framework.
+              NiostGroup International (“NiostGroup”, “the Group”, “we”, “our”, or “us”) is committed to maintaining high standards of integrity, transparency, accountability, and ethical business conduct across its evolving international operations and governance framework.
             </p>
             <p className="text-justify text-gray-600">
               This Anti-Corruption Policy establishes the Group’s position against bribery, corruption, unethical influence, fraud, and improper business conduct. The Group seeks to support governance-led operational standards consistent with responsible international business practices.
@@ -47,7 +47,7 @@ const AntiCorruptionPolicy = () => {
               2. Policy Statement
             </h2>
             <p className="text-justify text-gray-600">
-              NIOSTGROUP International maintains a zero-tolerance approach toward: bribery, corruption, fraudulent conduct, improper payments, unethical influence, facilitation payments, and other forms of corrupt activity.
+              NiostGroup International maintains a zero-tolerance approach toward: bribery, corruption, fraudulent conduct, improper payments, unethical influence, facilitation payments, and other forms of corrupt activity.
             </p>
             <p className="text-justify text-gray-600 font-medium">
               No person acting on behalf of the Group may directly or indirectly offer, authorize, request, provide, or accept improper advantages intended to influence business, regulatory, operational, or commercial decisions.
@@ -60,7 +60,7 @@ const AntiCorruptionPolicy = () => {
               3. Scope
             </h2>
             <p className="text-justify text-gray-600">
-              This Policy applies, where relevant, to: founders, directors, officers, employees, advisors, consultants, contractors, representatives, agents, strategic partners, and third parties acting on behalf of or in association with <span className="font-medium text-gray-900">NIOSTGROUP International</span>.
+              This Policy applies, where relevant, to: founders, directors, officers, employees, advisors, consultants, contractors, representatives, agents, strategic partners, and third parties acting on behalf of or in association with <span className="font-medium text-gray-900">NiostGroup International</span>.
             </p>
             <p className="text-gray-600">
               All associated persons are expected to comply with this Policy regardless of jurisdiction or operational environment.
@@ -111,7 +111,7 @@ const AntiCorruptionPolicy = () => {
               5. Third-Party Due Diligence
             </h2>
             <p className="text-gray-600 text-justify">
-              NIOSTGROUP International recognizes that corruption risks may arise through third-party relationships. The Group may seek to implement reasonable governance-oriented review measures relating to: strategic partners, consultants, contractors, intermediaries, and other associated parties. Relationships involving material ethical, legal, or corruption concerns may be restricted or terminated.
+              NiostGroup International recognizes that corruption risks may arise through third-party relationships. The Group may seek to implement reasonable governance-oriented review measures relating to: strategic partners, consultants, contractors, intermediaries, and other associated parties. Relationships involving material ethical, legal, or corruption concerns may be restricted or terminated.
             </p>
           </section>
 
@@ -160,7 +160,7 @@ const AntiCorruptionPolicy = () => {
               9. Non-Retaliation
             </h2>
             <p className="text-gray-600 text-justify">
-              Retaliation against individuals who report concerns in good faith is inconsistent with the principles of this Policy. NIOSTGROUP International seeks to encourage responsible reporting and ethical accountability.
+              Retaliation against individuals who report concerns in good faith is inconsistent with the principles of this Policy. NiostGroup International seeks to encourage responsible reporting and ethical accountability.
             </p>
           </section>
 
@@ -186,7 +186,7 @@ const AntiCorruptionPolicy = () => {
               11. International Governance Standards
             </h2>
             <p className="text-gray-600">
-              As an internationally oriented holding structure, NIOSTGROUP International seeks to support governance principles aligned with responsible international business conduct and institutional accountability. The Group recognizes the importance of ethical standards in:
+              As an internationally oriented holding structure, NiostGroup International seeks to support governance principles aligned with responsible international business conduct and institutional accountability. The Group recognizes the importance of ethical standards in:
             </p>
             <ul className="list-disc pl-6 space-y-1.5 text-gray-600">
               <li>Cross-border operations and infrastructure sectors</li>
@@ -215,7 +215,7 @@ const AntiCorruptionPolicy = () => {
               For governance or compliance-related inquiries:
             </p>
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-sm space-y-1 max-w-sm">
-              <p className="font-bold text-gray-900">NIOSTGROUP International</p>
+              <p className="font-bold text-gray-900">NiostGroup International</p>
               <p className="text-gray-600">Website: <a href="https://www.niostgroupinternational.com" target="_blank" rel="noreferrer" className="text-orange-600 hover:underline">www.niostgroupinternational.com</a></p>
               <p className="text-gray-600">Email: <a href="mailto:info@niostgroupinternational.com" className="text-orange-600 hover:underline">info@niostgroupinternational.com</a></p>
             </div>
@@ -227,7 +227,7 @@ const AntiCorruptionPolicy = () => {
               14. Formation Notice
             </h3>
             <p className="text-orange-950 text-sm md:text-base text-justify leading-relaxed">
-              NIOSTGROUP International is currently in formation. Certain governance structures, compliance procedures, reporting frameworks, oversight controls, and operational processes referenced in this Policy may evolve following formal establishment of relevant entities and operating platforms.
+              NiostGroup International is currently in formation. Certain governance structures, compliance procedures, reporting frameworks, oversight controls, and operational processes referenced in this Policy may evolve following formal establishment of relevant entities and operating platforms.
             </p>
           </section>
 

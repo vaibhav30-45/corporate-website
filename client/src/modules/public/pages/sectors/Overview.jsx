@@ -11,10 +11,12 @@ import {
 } from "react-icons/fi";
 
 import HeroSection from "../../../public/components/HeroSection";
-import heroImage from "../../../../assets/governance image.png";
+import heroImage from "../../../../assets/image 10 .webp";
 import futureImg from "../../../../assets/Future Scalable Sectors 258 (1).png";
 import logisticsImg from "../../../../assets/Rectangle256.png";
 import financeImg from "../../../../assets/Governance image.png";
+import { useEffect } from "react";
+import {  useLocation } from "react-router-dom";
 
 const sectorCards = [
   {
@@ -25,6 +27,7 @@ const sectorCards = [
   },
 
   {
+    
     title: "Maritime & Port",
     link: "/sectors/maritime",
     icon: FiGlobe,
@@ -46,11 +49,12 @@ const sectorCards = [
   },
 ];
 
+
 const detailSections = [
   {
     title: "Logistics",
     subtitle:
-      "NIOSTGROUP is developing logistics-focused platforms designed to support asset-backed operations, corridor efficiency, and structured market execution in international trade environments.",
+      "NiostGroup is developing logistics-focused platforms designed to support asset-backed operations, corridor efficiency, and structured market execution in international trade environments.",
 
     image: logisticsImg,
     icon: <FiTruck />,
@@ -84,7 +88,7 @@ const detailSections = [
   {
     title: "Agro-Industrial Manufacturing",
     subtitle:
-      "NIOSTGROUP recognizes agro-industrial manufacturing as a strategic sector where operational structure, asset discipline, and cross-border relevance can support long-term enterprise value.",
+      "NiostGroup recognizes agro-industrial manufacturing as a strategic sector where operational structure, asset discipline, and cross-border relevance can support long-term enterprise value.",
 
     image: financeImg,
     icon: <FiGrid />,
@@ -117,6 +121,24 @@ const detailSections = [
 ];
 const SectorPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+useEffect(() => {
+  if (location.hash) {
+    const element = document.getElementById(
+      location.hash.replace("#", "")
+    );
+
+    if (element) {
+      setTimeout(() => {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100);
+    }
+  }
+}, [location]);
 
   return (
     <div className="bg-white">
@@ -129,7 +151,7 @@ const SectorPage = () => {
       {/* Top Cards Section */}
       <section className="mx-auto px-5 sm:px-10 lg:px-20 py-12 sm:py-16 overflow-hidden">
        <div className="text-left mb-12">
-  <p className="text-orange-500 font-semibold uppercase tracking-[0.35em] mb-3">
+  <p className="text-primary font-semibold uppercase tracking-[0.35em] mb-3">
     Our Key Sectors
   </p>
 
@@ -138,7 +160,7 @@ const SectorPage = () => {
   </h2>
 
   <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-4xl">
-    NIOSTGROUP International is being structured as a multi-industry
+    NiostGroup International is being structured as a multi-industry
     holding group with a focus on sectors where governance, structure,
     and disciplined execution create long-term value. The group’s
     sector orientation reflects its intention to build credible,
@@ -192,6 +214,16 @@ const SectorPage = () => {
           <div className="grid gap-10">
             {detailSections.map((section, index) => (
               <motion.div
+               id={
+    section.title === "Logistics"
+      ? "logistics"
+      : section.title === "Maritime & Port"
+      ? "maritime"
+      : section.title === "Agro-Industrial Manufacturing"
+      ? "agro-industrial"
+      : "fintech"
+  }                
+                className="scroll-mt-28"
                 key={section.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -231,7 +263,7 @@ const SectorPage = () => {
                     <div className="flex items-center gap-4 mb-4">
                       <div
                         className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl shadow-sm ${section.accent === "orange"
-                          ? "bg-orange-500 text-white"
+                          ? "bg-primary text-white"
                           : section.accent === "emerald"
                             ? "bg-emerald-500 text-white"
                             : "bg-violet-500 text-white"
@@ -265,7 +297,7 @@ const SectorPage = () => {
         <span
           className={`w-2.5 h-2.5 rounded-full ${
             section.accent === "orange"
-              ? "bg-orange-500"
+              ? "bg-primary"
               : section.accent === "emerald"
               ? "bg-emerald-500"
               : section.accent === "blue"
@@ -299,7 +331,7 @@ const SectorPage = () => {
       viewport={{ once: true }}
       className="max-w-4xl mb-14"
     >
-      <p className="text-orange-500 font-semibold uppercase tracking-[0.3em] mb-3">
+      <p className="text-primary font-semibold uppercase tracking-[0.3em] mb-3">
         Services Overview
       </p>
 
@@ -308,7 +340,7 @@ const SectorPage = () => {
       </h2>
 
       <p className="text-gray-600 leading-relaxed text-base md:text-lg">
-        NIOSTGROUP International is being built to provide at holding
+        NiostGroup International is being built to provide at holding
         level and how its first operating platform is being positioned
         within that wider structure.
       </p>
@@ -328,7 +360,7 @@ const SectorPage = () => {
       >
        <div className="flex flex-col sm:flex-row items-start gap-5">
 
-          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-orange-100 text-orange-500 flex items-center justify-center text-2xl shrink-0">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-orange-100 text-primary flex items-center justify-center text-2xl shrink-0">
             <FiBriefcase />
           </div>
 
@@ -338,7 +370,7 @@ const SectorPage = () => {
             </h3>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              NIOSTGROUP International develops structured operating
+              NiostGroup International develops structured operating
               platforms designed around governance, strategic control,
               and long-term enterprise value.
             </p>
@@ -351,7 +383,7 @@ const SectorPage = () => {
                 "Long-term development discipline",
               ].map((point, idx) => (
                 <div key={idx} className="flex items-center gap-3">
-                  <span className="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-primary"></span>
 
                   <p className="text-gray-700">
                     {point}
@@ -384,7 +416,7 @@ const SectorPage = () => {
             </h3>
 
             <p className="text-gray-600 leading-relaxed mb-6">
-              Through its first operating platform, NIOSTGROUP
+              Through its first operating platform, NiostGroup
               Logistics, the group is preparing to support industrial
               and trade-linked customers with certified containers and
               related logistics assets.

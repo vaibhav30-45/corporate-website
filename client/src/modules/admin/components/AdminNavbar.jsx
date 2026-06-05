@@ -2,7 +2,7 @@ import { Bell, ChevronDown, User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
-import logo from "../../../assets/logo.png";
+import logo from "../../../assets/NiostGroup-logo.png";
 
 export default function AdminNavbar() {
   const navigate = useNavigate();
@@ -39,7 +39,11 @@ export default function AdminNavbar() {
   return (
     <header className="w-full bg-white border-b h-16 flex items-center justify-between px-6 fixed top-0 left-0 z-50">
 
-      <img src={logo} alt="logo" className="h-10 object-contain" />
+      <img
+  src={logo}
+  alt="logo"
+  className="h-16 object-contain"
+/>
 
       <div className="flex items-center gap-6">
 

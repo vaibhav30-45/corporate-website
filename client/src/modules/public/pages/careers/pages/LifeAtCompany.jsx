@@ -19,7 +19,7 @@ const LifeAtCompany = () => {
       {/* INTRO */}
       <div className="px-8 sm:px-12 lg:px-20 py-12 bg-gray-50">
         <div className="">
-          <h2 className="text-2xl font-bold text-orange-500 mb-4">
+          <h2 className="text-2xl font-bold text-primary mb-4">
             Our Culture
           </h2>
 
@@ -42,7 +42,7 @@ const LifeAtCompany = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
 
           <div>
-            <h2 className="text-2xl font-bold text-orange-500 mb-4">
+            <h2 className="text-2xl font-bold text-primary mb-4">
               Work. Learn. Grow.
             </h2>
 
@@ -54,9 +54,9 @@ const LifeAtCompany = () => {
             </p>
           </div>
 
-          <div className="h-[200px] md:h-[250px] bg-gradient-to-r from-orange-400 to-orange-600 rounded-lg flex items-center justify-center text-white text-lg font-semibold">
-            Your Growth Journey Starts Here
-          </div>
+          <div className="h-[200px] md:h-[250px] bg-gradient-to-r from-[#A04F23] via-[#B96937] to-[#D3854D] rounded-lg flex items-center justify-center text-white text-lg font-semibold">
+  Your Growth Journey Starts Here
+</div>
 
         </div>
 

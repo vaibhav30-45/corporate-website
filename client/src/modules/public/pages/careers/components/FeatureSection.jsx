@@ -2,7 +2,7 @@ import { Users, Lightbulb, HeartHandshake } from "lucide-react";
 
 const data = [
   {
-    icon: <Users className="text-orange-500" size={26} />,
+    icon: <Users className="text-primary" size={26} />,
     title: "Collaborative Culture",
     desc: "Work with talented professionals in a supportive environment.",
   },
@@ -22,7 +22,7 @@ const FeatureSection = () => {
   return (
     <div className="px-6 md:px-16 py-12 bg-white">
 
-      <h2 className="text-2xl font-bold text-orange-500 mb-8">
+      <h2 className="text-2xl font-bold text-primary mb-8">
         What Makes Us Different
       </h2>
 

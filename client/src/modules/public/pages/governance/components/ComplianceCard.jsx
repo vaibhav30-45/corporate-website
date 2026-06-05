@@ -19,7 +19,7 @@ const ComplianceCard = ({ title, index }) => {
     <div className="flex flex-col items-center text-center px-4">
 
       {/* ICON */}
-      <div className="w-12 h-12 flex items-center justify-center text-orange-500 mb-5">
+      <div className="w-12 h-12 flex items-center justify-center text-primary mb-5">
         {icons[index]}
       </div>
 
