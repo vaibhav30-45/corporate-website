@@ -1,1 +1,0 @@
-var e=`/assets/home%20about%20image-CPB8djxO.png`;export{e as t};

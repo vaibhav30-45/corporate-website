@@ -1,1 +1,0 @@
-var e=`/assets/About-BkzFbzU1.png`;export{e as t};

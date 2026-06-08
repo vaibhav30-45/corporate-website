@@ -1,1 +1,0 @@
-var e=`/assets/Group_95-BV5YXKPZ.png`;export{e as t};

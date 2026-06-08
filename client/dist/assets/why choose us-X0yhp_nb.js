@@ -1,1 +1,0 @@
-var e=`/assets/who-we-are-DTTO-BJl.png`,t=`/assets/why%20choose%20us-BsblVGXl.png`;export{e as n,t};
