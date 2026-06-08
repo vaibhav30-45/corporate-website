@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import PublicRoutes from './routes/publicRoutes';
-import AdminRoutes from './routes/adminRoutes';
+import AdminRoutes from './routes/AdminRoutes';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ScrollToTop from './components/ScrollToTop';
