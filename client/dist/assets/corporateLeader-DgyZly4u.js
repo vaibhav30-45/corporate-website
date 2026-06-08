@@ -1,0 +1,1 @@
+var e=`/assets/corporateLeader-BJOQEHm4.png`;export{e as t};
