@@ -12,9 +12,10 @@ import {
 
 import HeroSection from "../../../public/components/HeroSection";
 import heroImage from "../../../../assets/image 10 .webp";
-import futureImg from "../../../../assets/Future Scalable Sectors 258 (1).png";
+import agro from "../../../../assets/agro.jpeg";
+import port from "../../../../assets/port.jpeg";
 import logisticsImg from "../../../../assets/Rectangle256.png";
-import financeImg from "../../../../assets/Governance image.png";
+import financeImg from "../../../../assets/financial.jpeg";
 import { useEffect } from "react";
 import {  useLocation } from "react-router-dom";
 
@@ -73,7 +74,7 @@ const detailSections = [
     subtitle:
       "The group is being positioned to participate in maritime and port-linked opportunities through structured platform development, strategic infrastructure alignment, and governance-led sector participation.",
 
-    image: futureImg,
+    image: port,
     icon: <FiGlobe />,
     accent: "blue",
 
@@ -90,7 +91,7 @@ const detailSections = [
     subtitle:
       "NiostGroup recognizes agro-industrial manufacturing as a strategic sector where operational structure, asset discipline, and cross-border relevance can support long-term enterprise value.",
 
-    image: financeImg,
+    image: agro,
     icon: <FiGrid />,
     accent: "emerald",
 
@@ -107,7 +108,7 @@ const detailSections = [
     subtitle:
       "The group’s long-term vision includes participation in financial infrastructure and FinTech-related platforms where governance, regulatory discipline, and scalable structural design are essential.",
 
-    image: futureImg,
+    image: financeImg,
     icon: <FiTrendingUp />,
     accent: "violet",
 

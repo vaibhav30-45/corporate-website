@@ -80,13 +80,13 @@ const Footer = () => {
           <h3 className="font-semibold mb-4">Contact Us</h3>
           <ul className="space-y-3 text-sm text-gray-300">
             <li className="flex items-center gap-2">
-              <MdLocationOn /> 123 Street, city, Country
+              <MdLocationOn /> Australia
             </li>
             <li className="flex items-center gap-2">
               <MdPhone /> +91 9XXXXXXXXX
             </li>
             <li className="flex items-center gap-2">
-              <MdEmail /> info@corporate.com
+              <MdEmail /> info@niostgroupinternational.com
             </li>
           </ul>
           <div className="mt-6 flex gap-4 text-xl text-gray-300">
@@ -117,7 +117,7 @@ const Footer = () => {
 
       {/* LINE */}
       <div className="border-t border-gray-600 mt-10 pt-4 text-center text-gray-400 text-sm">
-        <p>© 2026 NiostGroup Inter Foundation. All rights reserved.</p>
+        <p>© 2026 NiostGroup International. All rights reserved.</p>
       </div>
     </footer>
   );

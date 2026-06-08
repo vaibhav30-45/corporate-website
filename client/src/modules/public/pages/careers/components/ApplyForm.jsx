@@ -165,7 +165,7 @@ const ApplyForm = ({ jobId }) => {
         )}
       </div>
 
-      <button className="w-full bg-primary text-white py-2 rounded hover:bg-orange-600">
+      <button className="w-full btn-gradient text-white py-2 rounded ">
         Submit Application
       </button>
     </form>

@@ -128,7 +128,7 @@ const JobDetail = () => {
 
             <button
               onClick={handleApplyClick}
-              className="w-full bg-primary px-5 py-2 text-white hover:bg-primary-hover"
+              className="w-full btn-gradient px-5 py-2 text-white"
             >
               Apply Now
             </button>

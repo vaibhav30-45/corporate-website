@@ -8,7 +8,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
       <div className="bg-white rounded-3xl p-6 sm:p-10 w-full max-w-2xl relative shadow-2xl animate-in fade-in zoom-in duration-300">
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 text-gray-400 hover:text-orange-500 transition-colors p-2 hover:bg-orange-50 rounded-full"
+          className="absolute top-5 right-5 text-gray-400 hover:text-primary transition-colors p-2 hover:bg-orange-50 rounded-full"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import about from "../../../../../assets/image 08 .jpg";
-import aboutwho from "../../../../../assets/who-we-are.png";
+import aboutwho from "../../../../../assets/who-be-are.jpeg";
 import CompanyOverview from "../../about/components/CompanyOverview";
 import HistoryTimeline from "../../about/components/HistoryTimeLine";
 import MissionVision from "../../about/components/MissionVision";
