@@ -1,1 +1,0 @@
-var e=`/assets/governance%20image-DN5wiUr6.png`;export{e as t};
