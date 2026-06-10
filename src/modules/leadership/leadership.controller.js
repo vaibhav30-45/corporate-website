@@ -1,5 +1,5 @@
 const Leadership = require("../leadership/leadership.model");
-
+const { uploadToCloudinary } = require("../../config/cloudinary");
 // Create Member
 exports.createMember = async (req, res) => {
   

@@ -7,19 +7,25 @@ const {
   getMember,
   updateMember,
   deleteMember,
+  uploadImage,
 } = require("./leadership.controller");
 
 const upload = require("../../middleware/upload.middleware");
 
+// router.post(
+//   "/upload-image",
+//   upload.single("image"),
+//   (req, res) => {
+//     res.json({
+//       success: true,
+//       imageUrl: `/uploads/${req.file.filename}`,
+//     });
+//   }
+// );
 router.post(
   "/upload-image",
   upload.single("image"),
-  (req, res) => {
-    res.json({
-      success: true,
-      imageUrl: `/uploads/${req.file.filename}`,
-    });
-  }
+  uploadImage
 );
 
 router.get("/admin/all", getMembers);
