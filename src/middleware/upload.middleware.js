@@ -48,18 +48,31 @@
 // });
 
 // module.exports = upload;
-const multer = require("multer");
-const cloudinary = require("../config/cloudinary");
-const { CloudinaryStorage } = require("multer-storage-cloudinary");
 
-const storage = new CloudinaryStorage({
-  cloudinary,
-  params: {
-    folder: "uploads",   // ya "blog-images"
-    resource_type: "auto"
+// const multer = require("multer");
+// const cloudinary = require("../config/cloudinary");
+// const { CloudinaryStorage } = require("multer-storage-cloudinary");
+
+// const storage = new CloudinaryStorage({
+//   cloudinary,
+//   params: {
+//     folder: "uploads",   // ya "blog-images"
+//     resource_type: "auto"
+//   },
+// });
+
+// const upload = multer({ storage });
+
+// module.exports = upload;
+const multer = require("multer");
+
+const storage = multer.memoryStorage();
+
+const upload = multer({
+  storage,
+  limits: {
+    fileSize: 5 * 1024 * 1024, // 5MB
   },
 });
-
-const upload = multer({ storage });
 
 module.exports = upload;
