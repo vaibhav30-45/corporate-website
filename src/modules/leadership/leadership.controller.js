@@ -86,7 +86,7 @@ exports.updateMember = async (req, res) => {
     });
   }
 };
-const uploadImage = async (req, res) => {
+exports.uploadImage = async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({
@@ -94,12 +94,16 @@ const uploadImage = async (req, res) => {
       });
     }
 
+    const result = await uploadToCloudinary(
+      req.file.buffer
+    );
+
     return res.status(200).json({
-      imageUrl: req.file.path, // ✅ Cloudinary URL
+      imageUrl: result.secure_url,
     });
 
   } catch (error) {
-    res.status(500).json({
+    return res.status(500).json({
       message: error.message,
     });
   }
