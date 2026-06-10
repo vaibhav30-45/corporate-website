@@ -47,11 +47,37 @@ const bcrypt = require("bcryptjs");
 
 //   return { token };
 // };
-exports.login = async (email, password) => {
-  console.log("EMAIL:", email);
-  console.log("PASSWORD:", password);
+// exports.login = async (email, password) => {
+//   console.log("EMAIL:", email);
+//   console.log("PASSWORD:", password);
 
-  const isMatch = await bcrypt.compare(password, ADMIN_PASSWORD_HASH);
+//   const isMatch = await bcrypt.compare(password, ADMIN_PASSWORD_HASH);
+
+//   console.log("MATCH:", isMatch);
+
+//   if (!isMatch) {
+//     throw new Error("Invalid password");
+//   }
+
+//   // ...
+// };
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
+
+exports.login = async (email, password) => {
+  const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+  const ADMIN_PASSWORD_HASH = process.env.ADMIN_PASSWORD;
+
+  console.log("EMAIL:", email);
+
+  if (email !== ADMIN_EMAIL) {
+    throw new Error("Invalid email");
+  }
+
+  const isMatch = await bcrypt.compare(
+    password,
+    ADMIN_PASSWORD_HASH
+  );
 
   console.log("MATCH:", isMatch);
 
@@ -59,5 +85,16 @@ exports.login = async (email, password) => {
     throw new Error("Invalid password");
   }
 
-  // ...
+  const token = jwt.sign(
+    {
+      email: ADMIN_EMAIL,
+      role: "admin",
+    },
+    process.env.JWT_SECRET,
+    {
+      expiresIn: "1d",
+    }
+  );
+
+  return { token };
 };
