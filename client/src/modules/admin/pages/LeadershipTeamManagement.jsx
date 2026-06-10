@@ -68,7 +68,7 @@ const LeadershipTeamManagement = () => {
           },
         },
       );
-
+      console.log("UPLOAD RESPONSE =>", res.data);
       setFormData((prev) => ({
         ...prev,
         // image: `${API_URL}${res.data.imageUrl}`,
@@ -83,6 +83,7 @@ const LeadershipTeamManagement = () => {
     e.preventDefault();
    
       console.log("Submitting:", formData);
+      
     try {
       if (editingMember) {
         await updateLeadershipMember(editingMember._id, formData);
