@@ -12,6 +12,7 @@ const uploadToCloudinary = (buffer) => {
     const stream = cloudinary.uploader.upload_stream(
       {
         folder: "leadership",
+        resource_type: "auto",
       },
       (error, result) => {
         if (error) return reject(error);
