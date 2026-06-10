@@ -1,4 +1,5 @@
 const blogService = require("./blog.service");
+const { uploadToCloudinary } = require("../../config/cloudinary");
 
 // CREATE
 exports.create = async (req, res) => {
@@ -66,5 +67,29 @@ exports.remove = async (req, res) => {
     return res.json({ message: "Deleted successfully" });
   } catch (err) {
     return res.status(500).json({ error: err.message });
+  }
+};
+exports.uploadImage = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({
+        message: "No file uploaded",
+      });
+    }
+
+    const result = await uploadToCloudinary(req.file.buffer);
+
+    return res.status(200).json({
+      success: true,
+      imageUrl: result.secure_url,
+    });
+
+  } catch (error) {
+    console.log("BLOG IMAGE ERROR:", error);
+
+    return res.status(500).json({
+      success: false,
+      message: error.message,
+    });
   }
 };
