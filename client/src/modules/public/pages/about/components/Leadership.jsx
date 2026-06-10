@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { getLeadershipMembers } from "../../../../../services/leadershipService";
 
 const Leadership = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [leaders, setLeaders] = useState([]);
   // const leaders = [
@@ -122,11 +123,21 @@ const Leadership = () => {
                 >
                   {/* Fixed aspect ratio and max-height ensures the corporate headshot looks sharp and un-stretched */}
                   <div className="w-full   aspect-[3/4] sm:aspect-square bg-gray-200 rounded-2xl overflow-hidden shadow-sm border border-gray-100">
-                    <img
+                  
+                    {/* <img
                       src={leader.image}
                       alt={leader.name}
                       className="w-full h-full object-cover object-top hover:scale-101 transition-transform duration-300"
-                    />
+                    /> */}
+                    <img
+  src={
+    leader.image?.includes("/uploads/")
+      ? `${API_URL}${leader.image.replace(API_URL, "").replace("http://localhost:5000", "")}`
+      : leader.image
+  }
+  alt={leader.name}
+  className="w-full h-full object-cover object-top hover:scale-101 transition-transform duration-300"
+/>
                   </div>
                 </motion.div>
               </div>

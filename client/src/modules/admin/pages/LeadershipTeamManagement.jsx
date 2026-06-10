@@ -7,6 +7,8 @@ import {
   deleteLeadershipMember,
   updateLeadershipMember,
 } from "../../../services/leadershipService";
+const API_URL = import.meta.env.VITE_API_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const LeadershipTeamManagement = () => {
   const token = localStorage.getItem("token");
@@ -30,6 +32,13 @@ const LeadershipTeamManagement = () => {
     try {
       const response = await getAdminLeadershipMembers();
 
+      console.log("Members Data:", response.data);
+
+      response.data.forEach((member) => {
+  console.log("Name:", member.name);
+  console.log("Image:", member.image);
+});
+
       setMembers(response.data);
     } catch (error) {
       console.log(error);
@@ -50,7 +59,7 @@ const LeadershipTeamManagement = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/leadership/upload-image",
+         `${API_BASE_URL}/leadership/upload-image`,
         data,
         {
           headers: {
@@ -62,7 +71,8 @@ const LeadershipTeamManagement = () => {
 
       setFormData((prev) => ({
         ...prev,
-        image: `http://localhost:5000${res.data.imageUrl}`,
+        // image: `${API_URL}${res.data.imageUrl}`,
+        image : res.data.imageUrl,
       }));
     } catch (err) {
       console.error(err);
@@ -71,7 +81,8 @@ const LeadershipTeamManagement = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+   
+      console.log("Submitting:", formData);
     try {
       if (editingMember) {
         await updateLeadershipMember(editingMember._id, formData);
@@ -154,13 +165,40 @@ const LeadershipTeamManagement = () => {
               </tr>
             ) : (
               members.map((member) => (
+                
                 <tr key={member._id} className="border-t">
                   <td className="p-4">
-                    <img
+                    {/* <img
                       src={member.image}
                       alt=""
                       className="w-14 h-14 rounded-lg object-cover"
-                    />
+                    /> */}
+                    {/* <img
+  src={
+    member.image?.startsWith("http")
+      ? member.image.replace(
+          "http://localhost:5000",
+          import.meta.env.VITE_API_URL
+        )
+      : `${import.meta.env.VITE_API_URL}${member.image}`
+  }
+  alt=""
+/> */}
+<img
+  src={
+    member.image?.startsWith("http")
+      ? member.image.replace(
+          "http://localhost:5000",
+          import.meta.env.VITE_API_URL
+        )
+      : `${import.meta.env.VITE_API_URL}${member.image}`
+  }
+  alt=""
+  className="w-20 h-20 object-cover"
+  onError={(e) => {
+    console.log("FAILED URL =>", e.target.src);
+  }}
+/>
                   </td>
 
                   <td className="p-4 font-medium">{member.name}</td>

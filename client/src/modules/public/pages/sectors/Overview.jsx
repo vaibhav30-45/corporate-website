@@ -224,7 +224,7 @@ useEffect(() => {
       ? "agro-industrial"
       : "fintech"
   }                
-               
+                
                 key={section.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -235,7 +235,7 @@ useEffect(() => {
                   ease: "easeOut",
                 }}
                 className={`
-                   scroll-mt-28 grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-10
+                  scroll-mt-28 grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-6 lg:gap-10
                   rounded-[32px]
               p-5 sm:p-6 lg:p-10
                   overflow-hidden

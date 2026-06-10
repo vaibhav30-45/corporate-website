@@ -2,6 +2,7 @@ const Leadership = require("../leadership/leadership.model");
 
 // Create Member
 exports.createMember = async (req, res) => {
+  
   try {
     const member = await Leadership.create(req.body);
 
@@ -89,13 +90,14 @@ const uploadImage = async (req, res) => {
   try {
     if (!req.file) {
       return res.status(400).json({
-        message: "No image uploaded",
+        message: "No file uploaded",
       });
     }
 
-    res.status(200).json({
-      imageUrl: `/uploads/${req.file.filename}`,
+    return res.status(200).json({
+      imageUrl: req.file.path, // ✅ Cloudinary URL
     });
+
   } catch (error) {
     res.status(500).json({
       message: error.message,

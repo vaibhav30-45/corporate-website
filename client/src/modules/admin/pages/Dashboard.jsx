@@ -291,33 +291,41 @@ const Dashboard = () => {
         <div className="lg:col-span-4 space-y-6">
           <div className="bg-corporate-navy rounded-3xl p-8 text-white relative overflow-hidden">
             <div className="relative z-10">
-              <h3 className="text-xl font-bold mb-2">Management Tools</h3>
-              <p className="text-blue-200/70 text-sm mb-6">
-                Quick shortcuts to manage your platform resources.
-              </p>
+              <h3 className="text-xl font-bold mb-2 text-black">
+  Management Tools
+</h3>
 
+<p className="text-gray-700 text-sm mb-6">
+  Quick shortcuts to manage your platform resources.
+</p>
               <div className="space-y-3">
                 <Link
-                  to="/admin/blogs"
-                  className="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/10 transition-colors"
-                >
-                  <span className="font-medium">Publish New Blog</span>
-                  <Plus size={18} className="text-corporate-orange" />
-                </Link>
-                <Link
-                  to="/admin/news"
-                  className="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/10 transition-colors"
-                >
-                  <span className="font-medium">Post News Update</span>
-                  <Plus size={18} className="text-corporate-orange" />
-                </Link>
-                <Link
-                  to="/admin/jobs"
-                  className="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 rounded-2xl border border-white/10 transition-colors"
-                >
-                  <span className="font-medium">Open Career Position</span>
-                  <Plus size={18} className="text-corporate-orange" />
-                </Link>
+  to="/admin/blogs"
+  className="flex items-center justify-between p-4 bg-white/80 hover:bg-white rounded-2xl border border-gray-200 transition-colors text-black"
+>
+  <span className="font-medium text-black">
+    Publish New Blog
+  </span>
+  <Plus size={18} className="text-corporate-orange" />
+</Link>
+               <Link
+  to="/admin/news"
+  className="flex items-center justify-between p-4 bg-white/80 hover:bg-white rounded-2xl border border-gray-200 transition-colors text-black"
+>
+  <span className="font-medium text-black">
+    Post News Update
+  </span>
+  <Plus size={18} className="text-corporate-orange" />
+</Link>
+               <Link
+  to="/admin/jobs"
+  className="flex items-center justify-between p-4 bg-white/80 hover:bg-white rounded-2xl border border-gray-200 transition-colors text-black"
+>
+  <span className="font-medium text-black">
+    Open Career Position
+  </span>
+  <Plus size={18} className="text-corporate-orange" />
+</Link>
               </div>
             </div>
             {/* Abstract background element */}

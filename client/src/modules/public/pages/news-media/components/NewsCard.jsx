@@ -40,11 +40,15 @@ const NewsCard = ({ item }) => {
       className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 border border-transparent hover:border-corporate-orange/20 group"
     >
       <Link to={`/announcements/${displayType}s/${slug}`} className="block relative aspect-video overflow-hidden">
-        <img
-          src={displayImage}
-          alt={title}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+       <img
+  src={
+    displayImage?.startsWith("http")
+      ? displayImage
+      : `${import.meta.env.VITE_API_URL}${displayImage}`
+  }
+  alt={title}
+  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+/>
         <div className={`absolute top-4 left-4 px-3 py-1 rounded text-white text-xs font-bold uppercase tracking-wider ${getBadgeColor(displayType)}`}>
           {displayCategory}
         </div>
