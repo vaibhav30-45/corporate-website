@@ -1,6 +1,7 @@
 const Leadership = require("../leadership/leadership.model");
 const { uploadToCloudinary } = require("../../config/cloudinary");
 // Create Member
+console.log("uploadToCloudinary =", uploadToCloudinary);
 exports.createMember = async (req, res) => {
   
   try {
@@ -86,24 +87,52 @@ exports.updateMember = async (req, res) => {
     });
   }
 };
+// exports.uploadImage = async (req, res) => {
+//   try {
+//     if (!req.file) {
+//       return res.status(400).json({
+//         message: "No file uploaded",
+//       });
+//     }
+
+//     const result = await uploadToCloudinary(
+//       req.file.buffer
+//     );
+
+//     return res.status(200).json({
+//       imageUrl: result.secure_url,
+//     });
+
+//   } catch (error) {
+//     return res.status(500).json({
+//       message: error.message,
+//     });
+//   }
+// };
 exports.uploadImage = async (req, res) => {
   try {
+    console.log("FILE =", req.file);
+
     if (!req.file) {
       return res.status(400).json({
         message: "No file uploaded",
       });
     }
 
-    const result = await uploadToCloudinary(
-      req.file.buffer
-    );
+    const result = await uploadToCloudinary(req.file.buffer);
+
+    console.log("CLOUDINARY RESULT =", result);
 
     return res.status(200).json({
+      success: true,
       imageUrl: result.secure_url,
     });
 
   } catch (error) {
+    console.log("UPLOAD ERROR =", error);
+
     return res.status(500).json({
+      success: false,
       message: error.message,
     });
   }
