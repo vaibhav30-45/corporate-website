@@ -75,7 +75,13 @@ const News = () => {
               new Date(a.date || a.publishedAt || a.createdAt),
           )
           .slice(0, 3);
-
+          console.log("Combined Data:", combined);
+          console.log(
+  combined.map(item => ({
+    title: item.title,
+    displayImage: item.displayImage
+  }))
+);
         setNewsItems(combined);
       } catch (error) {
         console.error("Error fetching news:", error);
@@ -162,6 +168,8 @@ const News = () => {
             </div>
           ) : newsItems.length > 0 ? (
             newsItems.map((item) => (
+              
+  
               <motion.div
                 key={item.slug}
                 variants={{
@@ -189,7 +197,7 @@ const News = () => {
               >
                 {/* IMAGE */}
                 <div className="relative overflow-hidden">
-                  <img
+                  {/* <img
                     src={item.displayImage}
                     alt={item.title}
                     className="
@@ -200,7 +208,26 @@ const News = () => {
                       transition-transform
                       duration-500
                     "
-                  />
+                  /> */}
+                  <img
+  src={
+    item.displayImage?.startsWith("http")
+      ? item.displayImage.replace(
+          "http://localhost:5000",
+          import.meta.env.VITE_API_URL
+        )
+      : `${import.meta.env.VITE_API_URL}${item.displayImage}`
+  }
+  alt={item.title}
+  className="
+    w-full
+    h-56
+    object-cover
+    group-hover:scale-110
+    transition-transform
+    duration-500
+  "
+/>
 
                   <span
                     className="

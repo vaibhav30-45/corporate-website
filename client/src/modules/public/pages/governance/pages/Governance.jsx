@@ -57,27 +57,36 @@ const Governance = () => {
             </p>
           </div>
 
-          {/* <button
-            onClick={() => {
-              navigate("/governance/board");
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-            className="text-blue-600 text-sm hover:underline"
-          >
-            View Board Details →
-          </button> */}
+          
         </div>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
           {members.map((m) => (
+            // <BoardCard
+            //   key={m._id}
+            //   name={m.name}
+            //   position={m.position}
+            //   image={m.image}
+            // />
             <BoardCard
-              key={m._id}
-              name={m.name}
-              position={m.position}
-              image={m.image}
-            />
+  key={m._id}
+  name={m.name}
+  position={m.position}
+  image={
+    m.image?.startsWith("http")
+      ? m.image.replace(
+          "http://localhost:5000",
+          import.meta.env.VITE_API_URL
+        )
+      : `${import.meta.env.VITE_API_URL}${m.image}`
+      
+  }
+ 
+/>
           ))}
+          
         </div>
+
       </section>
       {/* GOVERNANCE SECTION */}
       <section className="py-14 sm:py-20 bg-[#f8fafc] overflow-hidden">

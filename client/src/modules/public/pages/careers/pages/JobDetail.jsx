@@ -10,7 +10,7 @@ import careerImg from "../../../../../assets/Careers-image.png";
 
 import { MapPin, Briefcase, Clock } from "lucide-react";
 
-const API = "http://localhost:5000/api/career";
+const API = `${import.meta.env.VITE_API_BASE_URL}/career`;
 
 const JobDetail = () => {
   const { slug } = useParams();

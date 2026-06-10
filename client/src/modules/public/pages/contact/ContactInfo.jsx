@@ -84,7 +84,7 @@ const ContactPage = () => {
 
               <div className="text-sm text-gray-600 space-y-1">
                 <p>📞 +91 9XXXXXXXXX</p>
-                <p>📧 info@corporate.com</p>
+                <p>📧 info@niostgroupinternational.com</p>
                 <p>🕒 Mon - Fri: 9:00 AM - 6:00 PM</p>
               </div>
             </div>

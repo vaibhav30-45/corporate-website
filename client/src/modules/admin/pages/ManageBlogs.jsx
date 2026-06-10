@@ -30,6 +30,8 @@ import {
 import { getAdminNews } from "../../../services/newsService";
 import BlogEditor from "../components/BlogEditor";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const ManageBlogs = () => {
   // State
@@ -72,7 +74,39 @@ const ManageBlogs = () => {
    
   const token = localStorage.getItem("token");
 
-  const handleImageUpload = async (e) => {
+//   const handleImageUpload = async (e) => {
+//     console.log("UPLOAD RESPONSE:", res.data);
+//   const file = e.target.files[0];
+
+//   if (!file) return;
+
+//   const data = new FormData();
+//   data.append("image", file);
+
+//   try {
+//     const res = await axios.post(
+//        `${API_BASE_URL}/blog/upload-image`,
+//       data,
+//       {
+//         headers: {
+//           "Content-Type": "multipart/form-data",
+//           Authorization: `Bearer ${token}`,
+//         },
+//       }
+//     );
+//     console.log("UPLOAD RESPONSE:", res.data);
+
+//     setFormData((prev) => ({
+//       ...prev,
+//     //  bannerImage: `${API_URL}${res.data.imageUrl}`,
+//        bannerImage: res.data.imageUrl,
+
+//     }));
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
+const handleImageUpload = async (e) => {
   const file = e.target.files[0];
 
   if (!file) return;
@@ -82,7 +116,7 @@ const ManageBlogs = () => {
 
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/blog/upload-image",
+      `${API_BASE_URL}/blog/upload-image`,
       data,
       {
         headers: {
@@ -92,10 +126,16 @@ const ManageBlogs = () => {
       }
     );
 
+    console.log("UPLOAD RESPONSE:", res.data);
+        console.log("API_URL =", import.meta.env.VITE_API_URL);
+    console.log("IMAGE URL =", res.data.imageUrl);
+
+
     setFormData((prev) => ({
       ...prev,
-      bannerImage: `http://localhost:5000${res.data.imageUrl}`,
+      bannerImage: res.data.imageUrl,
     }));
+
   } catch (err) {
     console.error(err);
   }
@@ -200,9 +240,11 @@ const ManageBlogs = () => {
     setSuccessMessage("");
     setError(null);
   };
-
+  
   const handleFormSubmit = async (e) => {
+     
     e.preventDefault();
+     console.log("FORM DATA:", formData);
     setSubmitting(true);
     setError(null);
 
@@ -422,15 +464,34 @@ const ManageBlogs = () => {
                     >
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
-                          <img
+                          {/* <img
                             src={blog.bannerImage}
                             alt={blog.title}
                             className="w-12 h-12 rounded-lg object-cover"
-                            onError={(e) => {
-                              e.target.src =
-                                "https://via.placeholder.com/150?text=No+Image";
-                            }}
-                          />
+                           onError={(e) => {
+  e.target.onerror = null; // important
+  e.target.src = "/no-image.png";
+}}
+                          /> */}
+                          {blog.bannerImage ? (
+  <img
+    src={
+      blog.bannerImage.startsWith("http")
+        ? blog.bannerImage
+        : `${import.meta.env.VITE_API_URL}${blog.bannerImage}`
+    }
+    alt={blog.title}
+    className="w-12 h-12 rounded-lg object-cover"
+    onError={(e) => {
+      e.target.onerror = null;
+      e.target.src = "/no-image.png";
+    }}
+  />
+) : (
+  <div className="w-12 h-12 rounded-lg bg-gray-200 flex items-center justify-center">
+    <ImageIcon size={16} className="text-gray-400" />
+  </div>
+)}
                           <div>
                             <p className="text-sm font-bold text-corporate-navy line-clamp-1">
                               {blog.title}
@@ -744,14 +805,11 @@ const ManageBlogs = () => {
 />
                         {formData.bannerImage && (
                           <div className="rounded-xl overflow-hidden aspect-video shadow-sm border border-gray-100">
-                            <img
-                              src={formData.bannerImage}
-                              alt="Preview"
-                              className="w-full h-full object-cover"
-                              onError={(e) => {
-                                e.target.style.display = "none";
-                              }}
-                            />
+                           <img
+  src={formData.bannerImage}
+  alt="Preview"
+  className="w-full h-full object-cover"
+/>
                           </div>
                         )}
                       </div>

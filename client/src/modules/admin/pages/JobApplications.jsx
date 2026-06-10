@@ -35,7 +35,7 @@ const ResumeViewer = ({ application, isOpen, onClose }) => {
 
     const resumeUrl = application.resume?.startsWith('http') 
         ? application.resume 
-        : `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${application.resume}`;
+        : `${import.meta.env.VITE_API_URL }${application.resume}`;
 
     return (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
@@ -237,7 +237,7 @@ const JobApplications = () => {
         if (resumePath) {
             const url = resumePath.startsWith('http') 
                 ? resumePath 
-                : `${import.meta.env.VITE_API_URL || 'http://localhost:5000'}${resumePath}`;
+                : `${import.meta.env.VITE_API_URL }${resumePath}`;
             window.open(url, '_blank');
         }
     };

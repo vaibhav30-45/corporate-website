@@ -6,6 +6,7 @@ import { getBlogBySlug, getBlogs } from "../../../../services/blogService";
 import { getNewsBySlug, getAllNews } from "../../../../services/newsService";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
+const API_URL = import.meta.env.VITE_API_URL;
 const NewsDetail = () => {
   const { id: slug } = useParams(); // Using 'id' parameter as slug
   const navigate = useNavigate();
@@ -115,6 +116,8 @@ const NewsDetail = () => {
   // Map fields based on model type
   const displayTitle = item.title;
   const displayImage = item.bannerImage || item.image;
+  console.log("DISPLAY IMAGE:", displayImage);
+console.log("ITEM:", item);
   const displayDate = new Date(
     item.date || item.publishedAt,
   ).toLocaleDateString("en-GB", {
@@ -130,14 +133,25 @@ const NewsDetail = () => {
     <div className="min-h-screen bg-white mt-20">
       {/* Hero Banner */}
       <section className="relative h-[500px] md:h-[600px] overflow-hidden">
-        <motion.img
+        {/* <motion.img
           initial={{ scale: 1.1 }}
           animate={{ scale: 1 }}
           transition={{ duration: 1.5 }}
           src={displayImage}
           alt={displayTitle}
+            onError={() => console.log("FAILED:", displayImage)}
+
           className="w-full h-full object-cover"
-        />
+        /> */}
+        <motion.img
+  initial={{ scale: 1.1 }}
+  animate={{ scale: 1 }}
+  transition={{ duration: 1.5 }}
+  src={`${API_URL}${displayImage}`}
+  alt={displayTitle}
+  className="w-full h-full object-cover"
+/>
+        
         <div className="absolute inset-0 bg-corporate-navy/40"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-corporate-navy via-transparent to-transparent opacity-90"></div>
 
@@ -361,11 +375,29 @@ const NewsDetail = () => {
                         className="flex gap-4 group"
                       >
                         <div className="w-24 h-20 shrink-0 overflow-hidden rounded-lg">
-                          <img
+                          {/* <img
                             src={related.displayImage}
                             alt={related.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                          />
+                          /> */}
+                          {/* <img
+  src={`${API_URL}${related.displayImage}`}
+  alt={related.title}
+  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+/> */}
+<img
+  src={
+    related.displayImage?.startsWith("http")
+      ? related.displayImage
+      : `${API_URL}${related.displayImage}`
+  }
+  alt={related.title}
+  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+  onError={(e) => {
+    console.log("FAILED RELATED:", related.displayImage);
+    console.log("FINAL URL:", e.target.src);
+  }}
+/>
                         </div>
                         <div>
                           <p className="text-xs text-corporate-orange font-bold uppercase mb-1">
