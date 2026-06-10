@@ -5,7 +5,7 @@ const controller = require("./blog.controller");
 const authMiddleware = require("../../middleware/auth.middleware");
 const adminMiddleware = require("../../middleware/admin.middleware");
 const upload = require("../../middleware/upload.middleware");
-
+const { uploadImage } = require("./blog.controller");
 // ADMIN
 router.post("/", authMiddleware, adminMiddleware, controller.create);
 router.put("/:id", authMiddleware, adminMiddleware, controller.update);
@@ -16,12 +16,7 @@ router.post(
   authMiddleware,
   adminMiddleware,
   upload.single("image"),
-  (req, res) => {
-    res.json({
-      success: true,
-      imageUrl: `/uploads/${req.file.filename}`,
-    });
-  }
+  uploadImage
 );
 
 // PUBLIC
