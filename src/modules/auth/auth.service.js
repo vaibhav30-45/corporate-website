@@ -17,8 +17,8 @@
 
 //   return { token };
 // };
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcryptjs");
+// const jwt = require("jsonwebtoken");
+// const bcrypt = require("bcryptjs");
 
 // exports.login = async (email, password) => {
 //   // hardcoded admin
