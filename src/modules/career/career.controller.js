@@ -1,4 +1,5 @@
 const service = require("./career.service");
+const { uploadToCloudinary } = require("../../config/cloudinary");
 
 // JOB CREATE
 exports.createJob = async (req, res) => {
@@ -41,17 +42,35 @@ exports.deleteJob = async (req, res) => {
 };
 
 // APPLY
+// exports.apply = async (req, res) => {
+//   try {
+//     const data = req.body;
+
+//     if (req.file) {
+//       data.resume = `/uploads/${req.file.filename}`;
+//     }
+
+//     const app = await service.applyJob(data);
+//     res.status(201).json(app);
+//   } catch (err) {
+//     res.status(400).json({ error: err.message });
+//   }
+// };
 exports.apply = async (req, res) => {
   try {
     const data = req.body;
 
     if (req.file) {
-      data.resume = `/uploads/${req.file.filename}`;
+      const result = await uploadToCloudinary(req.file.buffer);
+
+      data.resume = result.secure_url;
     }
 
     const app = await service.applyJob(data);
+
     res.status(201).json(app);
   } catch (err) {
+    console.log(err);
     res.status(400).json({ error: err.message });
   }
 };

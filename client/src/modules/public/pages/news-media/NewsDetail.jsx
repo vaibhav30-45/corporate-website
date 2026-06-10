@@ -143,15 +143,22 @@ console.log("ITEM:", item);
 
           className="w-full h-full object-cover"
         /> */}
-        <motion.img
+       <motion.img
   initial={{ scale: 1.1 }}
   animate={{ scale: 1 }}
   transition={{ duration: 1.5 }}
-  src={`${API_URL}${displayImage}`}
+  src={
+    displayImage?.startsWith("http")
+      ? displayImage
+      : `${API_URL}${displayImage}`
+  }
   alt={displayTitle}
   className="w-full h-full object-cover"
+  onError={(e) => {
+    console.log("FAILED HERO:", displayImage);
+    console.log("FINAL HERO URL:", e.target.src);
+  }}
 />
-        
         <div className="absolute inset-0 bg-corporate-navy/40"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-corporate-navy via-transparent to-transparent opacity-90"></div>
 

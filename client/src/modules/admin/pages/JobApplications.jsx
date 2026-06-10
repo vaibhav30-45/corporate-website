@@ -233,14 +233,26 @@ const JobApplications = () => {
         setIsResumeViewerOpen(true);
     };
 
+    // const handleDownloadResume = (resumePath) => {
+    //     if (resumePath) {
+    //         const url = resumePath.startsWith('http') 
+    //             ? resumePath 
+    //             : `${import.meta.env.VITE_API_URL }${resumePath}`;
+                
+    //         window.open(url, '_blank');
+    //     }
+    // };
     const handleDownloadResume = (resumePath) => {
-        if (resumePath) {
-            const url = resumePath.startsWith('http') 
-                ? resumePath 
-                : `${import.meta.env.VITE_API_URL }${resumePath}`;
-            window.open(url, '_blank');
-        }
-    };
+  console.log("RESUME PATH =", resumePath);
+
+  const url = resumePath.startsWith("http")
+    ? resumePath
+    : `${import.meta.env.VITE_API_URL}${resumePath}`;
+
+  console.log("FINAL URL =", url);
+
+  window.open(url, "_blank");
+};
 
     if (loading) {
         return (
